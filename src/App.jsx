@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonals'
 import Footer from './components/Footer'
 import AboutUsPage from './pages/About'
 import Home from './pages/Home'
+import International from './components/International'
 
 
 function HomePage() {
@@ -18,12 +19,12 @@ function HomePage() {
     <>
       <Hero />
       <Banner />
-      <Testimonials/>
-      <Services/>
-      <CTASection/>
-      <AboutSection/>
-      <TeamSection/>
-      <AppointmentBooking/>
+      <Testimonials />
+      <Services />
+      <CTASection />
+      <AboutSection />
+      <TeamSection />
+      <AppointmentBooking />
     </>
   )
 }
@@ -37,8 +38,9 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/international-clients" element={<International />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </BrowserRouter>
   )

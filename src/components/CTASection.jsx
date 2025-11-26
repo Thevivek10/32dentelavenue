@@ -1,43 +1,54 @@
 import React from 'react';
-const Banner = 'https://i.ibb.co/0Vh1mYVt/IMG-0428.jpg'
+import { ArrowRight } from 'lucide-react';
+
+const Banner = 'https://i.ibb.co/0Vh1mYVt/IMG-0428.jpg';
 
 export default function DentalCTA() {
   return (
-    <section
-      className=" py-12 md:py-0 bg-[#88d4cb] overflow-hidden rounded-xl"
-      aria-label="cta"
-    >
-      <div className="container mx-auto px-4 max-w-[540px] sm:max-w-[540px] md:max-w-[750px] lg:max-w-[980px] xl:max-w-[1180px]">
-        <div className="flex flex-col md:grid md:grid-cols-2 md:items-center md:gap-8">
-          
-          {/* CTA Banner */}
-          <figure className="relative w-full h-[320px] md:h-[380px] lg:h-[420px] overflow-hidden rounded-lg">
-            <img
-              src={Banner}
-              alt="Dentist holding dental model"
-              className="absolute inset-0 w-full h-full object-cover"
-              loading="lazy"
-            />
-          </figure>
+    <section className="py-20 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative bg-[#f7f4f1] rounded-[2.5rem] overflow-hidden shadow-sm">
+          <div className="grid lg:grid-cols-2 gap-0">
+            {/* Content Side */}
+            <div className="relative z-10 flex flex-col justify-center p-8 sm:p-12 lg:p-16 xl:p-20 order-2 lg:order-1">
+              <div className="max-w-xl">
+                <span className="inline-block py-1 px-3 rounded-full bg-white text-[#88d4cb] text-sm font-semibold tracking-wide mb-6 shadow-sm">
+                  Book Your Visit
+                </span>
 
-          {/* CTA Content */}
-          <div className="text-center md:text-left md:py-[40px] lg:py-[60px] px-4">
-            <p className="text-white text-sm md:text-base font-medium mb-3 capitalize tracking-wide">
-              Book Dental Appointment
-            </p>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#424040] mb-6 leading-[1.15]">
+                  Start Your Journey to a <span className="text-[#88d4cb]">Confident Smile</span>
+                </h2>
 
-            <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Start Your Journey to a Confident, Healthy Smile
-            </h2>
+                <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                  Experience world-class dental care with our expert team. We combine advanced technology with a gentle touch to give you the smile you deserve.
+                </p>
 
-            <a
-              href="#"
-              className="inline-block bg-white text-[#88d4cb] font-semibold px-8 py-3 rounded-lg hover:bg-[#f0fdfa] hover:text-[#5fa49d] transition-all duration-300 uppercase tracking-wide text-sm max-w-max shadow-md"
-            >
-              Book Appointment
-            </a>
+                <button className="group inline-flex items-center gap-2 bg-[#424040] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-[#88d4cb] hover:shadow-lg hover:-translate-y-1">
+                  Book Appointment
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </button>
+              </div>
+
+              {/* Decorative Elements */}
+              <div className="absolute top-0 left-0 w-64 h-64 bg-white/50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+              <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#88d4cb]/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+            </div>
+
+            {/* Image Side */}
+            <div className="relative h-[300px] sm:h-[400px] lg:h-auto order-1 lg:order-2">
+              <div className="absolute inset-0 bg-gray-200">
+                <img
+                  src={Banner}
+                  alt="Modern Dental Care"
+                  className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              {/* Overlay Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#f7f4f1] via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#f7f4f1] lg:to-transparent opacity-50 lg:opacity-100"></div>
+            </div>
           </div>
-
         </div>
       </div>
     </section>

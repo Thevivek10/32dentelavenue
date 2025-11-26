@@ -11,36 +11,42 @@ const serviceImages = {
 
 const serviceData = [
   {
+    id: "cosmetic",
     image: serviceImages.cosmetic,
     title: "Cosmetic Dentistry",
     description:
       "Advanced smile enhancement treatments combining restoration, technology, and natural-looking results.",
   },
   {
+    id: "alignment",
     image: serviceImages.alignment,
     title: "Teeth Alignment",
     description:
       "Modern orthodontic solutions using metal, ceramic, and clear aligners for precise, comfortable smile correction.",
   },
   {
+    id: "wisdom",
     image: serviceImages.wisdom,
     title: "Wisdom Tooth Surgery",
     description:
       "Safe, painless removal of impacted wisdom teeth with advanced surgical precision.",
   },
   {
+    id: "root-canal",
     image: serviceImages.rootCanal,
     title: "Root Canal Treatment",
     description:
       "Pain-free treatment to remove infection and preserve your natural tooth structure.",
   },
   {
+    id: "implants",
     image: serviceImages.implants,
     title: "Dental Implants",
     description:
       "Permanent tooth replacement offering natural aesthetics, stability, and long-lasting confidence.",
   },
   {
+    id: "hygiene",
     image: serviceImages.hygiene,
     title: "Oral Hygiene & Preventive Care",
     description:
@@ -67,7 +73,8 @@ const Services = () => {
         {serviceData.map((service, index) => (
           <div
             key={index}
-            className="bg-[#f7f4f1] rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+            id={service.id}
+            className="bg-[#f7f4f1] rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 scroll-mt-24"
           >
             {/* Image */}
             <div className="h-80 md:h-96 w-full overflow-hidden">

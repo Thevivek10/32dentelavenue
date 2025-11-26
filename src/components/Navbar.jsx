@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -20,9 +22,8 @@ function Navbar() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-[#f7f4f1] shadow-lg' : 'bg-[#f7f4f1]'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#f7f4f1] shadow-lg' : 'bg-[#f7f4f1]'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -47,33 +48,63 @@ function Navbar() {
           <div className="hidden md:flex md:items-center md:space-x-8">
             <Link
               to="/"
-              className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${
-                location.pathname === '/' ? 'bg-[#f7f4f1]/60' : ''
-              }`}
+              className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/' ? 'bg-[#f7f4f1]/60' : ''
+                }`}
             >
               Home
             </Link>
+            <div className="relative group">
+              <button
+                className={`flex items-center text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/home' ? 'bg-[#f7f4f1]/60' : ''
+                  }`}
+              >
+                Services
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+
+              {/* Dropdown Menu */}
+              <div className="absolute left-0 mt-0 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left z-50 border border-gray-100 overflow-hidden">
+                <div className="py-2">
+                  <a href="/home#cosmetic" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                    Cosmetic Dentistry
+                  </a>
+                  <a href="/home#alignment" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                    Teeth Alignment
+                  </a>
+                  <a href="/home#wisdom" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                    Wisdom Tooth Surgery
+                  </a>
+                  <a href="/home#root-canal" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                    Root Canal Treatment
+                  </a>
+                  <a href="/home#implants" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                    Dental Implants
+                  </a>
+                  <a href="/home#hygiene" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                    Oral Hygiene & Preventive Care
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <Link
-              to="/home"
-              className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${
-                location.pathname === '/home' ? 'bg-[#f7f4f1]/60' : ''
-              }`}
+              to="/international-clients"
+              className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/international-clients' ? 'bg-[#f7f4f1]/60' : ''
+                }`}
             >
-              Services
+              International Clients
             </Link>
             <Link
               to="/about"
-              className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${
-                location.pathname === '/about' ? 'bg-[#f7f4f1]/60' : ''
-              }`}
+              className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/about' ? 'bg-[#f7f4f1]/60' : ''
+                }`}
             >
               About Us
             </Link>
             <Link
               to="/contact"
-              className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${
-                location.pathname === '/contact' ? 'bg-[#f7f4f1]/60' : ''
-              }`}
+              className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/contact' ? 'bg-[#f7f4f1]/60' : ''
+                }`}
             >
               Contact Us
             </Link>
@@ -104,59 +135,116 @@ function Navbar() {
       </div>
 
       {/* Mobile menu */}
-<div
-  className={`md:hidden absolute top-16 left-0 w-full transform transition-all duration-300 ease-in-out ${
-    isOpen
-      ? 'opacity-100 translate-y-0 visible'
-      : 'opacity-0 -translate-y-2 invisible'
-  }`}
->
-  <div className="px-4 pt-4 pb-6 space-y-2 bg-[#f7f4f1]/95 backdrop-blur-md shadow-xl rounded-b-2xl border-t border-[#e0ddd9]">
-    <Link
-      to="/"
-      onClick={() => setIsOpen(false)}
-      className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${
-        location.pathname === '/' ? 'bg-[#eae7e3]' : ''
-      }`}
-    >
-      Home
-    </Link>
-    <Link
-      to="/home"
-      onClick={() => setIsOpen(false)}
-      className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${
-        location.pathname === '/home' ? 'bg-[#eae7e3]' : ''
-      }`}
-    >
-      Services
-    </Link>
-    <Link
-      to="/about"
-      onClick={() => setIsOpen(false)}
-      className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${
-        location.pathname === '/about' ? 'bg-[#eae7e3]' : ''
-      }`}
-    >
-      About Us
-    </Link>
-    <Link
-      to="/contact"
-      onClick={() => setIsOpen(false)}
-      className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${
-        location.pathname === '/contact' ? 'bg-[#eae7e3]' : ''
-      }`}
-    >
-      Contact Us
-    </Link>
+      <div
+        className={`md:hidden absolute top-16 left-0 w-full transform transition-all duration-300 ease-in-out ${isOpen
+          ? 'opacity-100 translate-y-0 visible'
+          : 'opacity-0 -translate-y-2 invisible'
+          }`}
+      >
+        <div className="px-4 pt-4 pb-6 space-y-2 bg-[#f7f4f1]/95 backdrop-blur-md shadow-xl rounded-b-2xl border-t border-[#e0ddd9]">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${location.pathname === '/' ? 'bg-[#eae7e3]' : ''
+              }`}
+          >
+            Home
+          </Link>
+          <button
+            onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+            className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${location.pathname === '/home' ? 'bg-[#eae7e3]' : ''
+              }`}
+          >
+            Services
+            <ChevronDown
+              className={`h-5 w-5 transform transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''
+                }`}
+            />
+          </button>
 
-    <button
-      onClick={() => setIsOpen(false)}
-      className="w-full mt-3 bg-[#88d4cb] text-white px-6 py-2.5 rounded-lg font-semibold transition-all hover:shadow-lg hover:shadow-[#88d4cb]/40"
-    >
-      Book Appointment
-    </button>
-  </div>
-</div>
+          {/* Mobile Services Dropdown */}
+          <div
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileServicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+              }`}
+          >
+            <div className="pl-6 space-y-2 pb-2">
+              <a
+                href="/home#cosmetic"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
+              >
+                Cosmetic Dentistry
+              </a>
+              <a
+                href="/home#alignment"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
+              >
+                Teeth Alignment
+              </a>
+              <a
+                href="/home#wisdom"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
+              >
+                Wisdom Tooth Surgery
+              </a>
+              <a
+                href="/home#root-canal"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
+              >
+                Root Canal Treatment
+              </a>
+              <a
+                href="/home#implants"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
+              >
+                Dental Implants
+              </a>
+              <a
+                href="/home#hygiene"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
+              >
+                Oral Hygiene
+              </a>
+            </div>
+          </div>
+          <Link
+            to="/international-clients"
+            onClick={() => setIsOpen(false)}
+            className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${location.pathname === '/international-clients' ? 'bg-[#eae7e3]' : ''
+              }`}
+          >
+            International Clients
+          </Link>
+          <Link
+            to="/about"
+            onClick={() => setIsOpen(false)}
+            className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${location.pathname === '/about' ? 'bg-[#eae7e3]' : ''
+              }`}
+          >
+            About Us
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => setIsOpen(false)}
+            className={`block px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${location.pathname === '/contact' ? 'bg-[#eae7e3]' : ''
+              }`}
+          >
+            Contact Us
+          </Link>
+
+          <button
+            onClick={() => setIsOpen(false)}
+            className="w-full mt-3 bg-[#88d4cb] text-white px-6 py-2.5 rounded-lg font-semibold transition-all hover:shadow-lg hover:shadow-[#88d4cb]/40"
+          >
+            Book Appointment
+          </button>
+        </div>
+      </div>
     </nav>
   );
 }
