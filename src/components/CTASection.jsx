@@ -46,7 +46,7 @@ export default function DentalCTA() {
                 />
               </div>
               {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#f7f4f1] via-transparent to-transparent lg:bg-gradient-to-r lg:from-[#f7f4f1] lg:to-transparent opacity-50 lg:opacity-100"></div>
+
             </div>
           </div>
         </div>

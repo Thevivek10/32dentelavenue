@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import AboutUsPage from './pages/About'
 import Home from './pages/Home'
 import International from './components/International'
+import International2 from './components/international2'
 
 
 function HomePage() {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/international-clients" element={<International />} />
+          <Route path="/international-2" element={<International2 />} />
         </Routes>
         <Footer />
       </div>
