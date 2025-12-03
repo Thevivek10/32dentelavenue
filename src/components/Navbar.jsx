@@ -65,15 +65,15 @@ function Navbar() {
               {/* Dropdown Menu */}
               <div className="absolute left-0 mt-0 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left z-50 border border-gray-100 overflow-hidden">
                 <div className="py-2">
-                  <a href="/home#cosmetic" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                  <Link to="/cosmetic-dentistry" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Cosmetic Dentistry
-                  </a>
-                  <a href="/home#alignment" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                  </Link>
+                  <Link to="/teeth-alignment" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Teeth Alignment
-                  </a>
-                  <a href="/home#wisdom" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                  </Link>
+                  <Link to="/wisdom-tooth-surgery" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Wisdom Tooth Surgery
-                  </a>
+                  </Link>
                   <a href="/home#root-canal" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Root Canal Treatment
                   </a>
@@ -168,27 +168,27 @@ function Navbar() {
               }`}
           >
             <div className="pl-6 space-y-2 pb-2">
-              <a
-                href="/home#cosmetic"
+              <Link
+                to="/cosmetic-dentistry"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
               >
                 Cosmetic Dentistry
-              </a>
-              <a
-                href="/home#alignment"
+              </Link>
+              <Link
+                to="/teeth-alignment"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
               >
                 Teeth Alignment
-              </a>
-              <a
-                href="/home#wisdom"
+              </Link>
+              <Link
+                to="/wisdom-tooth-surgery"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
               >
                 Wisdom Tooth Surgery
-              </a>
+              </Link>
               <a
                 href="/home#root-canal"
                 onClick={() => setIsOpen(false)}

@@ -13,6 +13,9 @@ import AboutUsPage from './pages/About'
 import Home from './pages/Home'
 import International from './components/International'
 import International2 from './components/international2'
+import Cosmetic from './components/services/Cosmetic'
+import TeethAlignment from './components/services/TeethAlignment'
+import WisdomTooth from './components/services/WisdomTooth'
 
 
 function HomePage() {
@@ -41,6 +44,9 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/international-clients" element={<International />} />
           <Route path="/international-2" element={<International2 />} />
+          <Route path="/cosmetic-dentistry" element={<Cosmetic />} />
+          <Route path="/teeth-alignment" element={<TeethAlignment />} />
+          <Route path="/wisdom-tooth-surgery" element={<WisdomTooth />} />
         </Routes>
         <Footer />
       </div>
