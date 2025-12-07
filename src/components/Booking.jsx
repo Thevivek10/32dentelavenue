@@ -24,11 +24,11 @@ export default function AppointmentBooking() {
   };
 
   return (
-    <div className="bg-[#f7f4f1] w-full py-12 md:py-1">
+    <div className="bg-[#f7f4f1] w-full py-12 md:py-1 mt-10">
       {/* Section Wrapper */}
       <div className="w-full max-w-[1600px] mx-auto">
         {/* Header */}
-        <div className="px-6 sm:px-8 lg:px-12 max-w-4xl mx-auto text-center mb-12">
+        <div className="px-6 sm:px-8 lg:px-12 max-w-4xl mx-auto text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-bold text-[#424040] mb-3">Schedule Your Visit</h2>
           <p className="text-lg text-[#424040]/80">Book an appointment in minutes — choose a location and date, and we'll confirm your visit.</p>
         </div>
@@ -40,8 +40,8 @@ export default function AppointmentBooking() {
             <div className="absolute bottom-12 left-16 w-48 h-48 bg-[#afabfd]/10 rounded-full blur-2xl"></div>
 
             <div className="relative z-10 max-w-lg mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-[#424040] mb-6 flex items-center gap-2">
-                🦷 Book Appointment
+              <h1 className="text-3xl md:text-5xl font-bold text-[#424040] mb-6 flex items-center gap-1">
+                Book Appointment
               </h1>
               <p className="text-[#424040]/80 mb-10 leading-relaxed text-lg">
                 Fill in your details and we’ll confirm your visit. Our expert dentists are ready to care for your smile!

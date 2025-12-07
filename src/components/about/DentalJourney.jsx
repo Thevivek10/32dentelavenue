@@ -67,7 +67,7 @@ export default function DentalJourney() {
               <h4 className="text-2xl md:text-3xl font-semibold text-teal-600 mt-2">
                 {item.title}
               </h4>
-              <p className="text-lg md:text-xl text-gray-700 mt-3 max-w-3xl leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 mt-3 max-w-4xl leading-relaxed">
                 {item.description}
               </p>
             </motion.div>

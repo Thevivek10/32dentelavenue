@@ -12,9 +12,9 @@ export default function DentalCTA() {
             {/* Content Side */}
             <div className="relative z-10 flex flex-col justify-center p-8 sm:p-12 lg:p-16 xl:p-20 order-2 lg:order-1">
               <div className="max-w-xl">
-                <span className="inline-block py-1 px-3 rounded-full bg-white text-[#88d4cb] text-sm font-semibold tracking-wide mb-6 shadow-sm">
+                {/* <span className="inline-block py-1 px-3 rounded-full bg-white text-[#88d4cb] text-sm font-semibold tracking-wide mb-6 shadow-sm">
                   Book Your Visit
-                </span>
+                </span> */}
 
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#424040] mb-6 leading-[1.15]">
                   Start Your Journey to a <span className="text-[#88d4cb]">Confident Smile</span>

@@ -16,7 +16,7 @@ const ExpertDentists = () => {
           className="text-center mb-24"
         >
           <h2 className="text-5xl md:text-7xl font-extrabold text-[#2c3e50] font-['Raleway'] mb-6">
-            Meet Our <span className="text-[#88d4cb]">Expert</span> Dentists
+            Meet Our <span className="">Expert</span> Dentists
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-['Open Sans'] leading-relaxed">
             Compassionate care. Advanced expertise. Creating confident smiles for every age.
@@ -45,7 +45,7 @@ const ExpertDentists = () => {
             <h3 className="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-4 font-['Raleway'] flex items-center justify-center md:justify-start gap-3">
               <FaUserMd className="text-[#88d4cb]" /> Dr. Ankita Sharma Gambhir
             </h3>
-            <p className="text-[#88d4cb] text-2xl font-semibold mb-4 font-['Raleway'] uppercase">
+            <p className="text-2xl font-semibold mb-4 font-['Raleway'] uppercase">
               Pediatric Dentist
             </p>
             <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-4 font-['Open Sans']">
@@ -88,7 +88,7 @@ const ExpertDentists = () => {
             <h3 className="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-4 font-['Raleway'] flex items-center justify-center md:justify-start gap-3">
               <FaUserMd className="text-[#88d4cb]" /> Dr. Anuj Gambhir
             </h3>
-            <p className="text-[#88d4cb] text-2xl font-semibold mb-4 font-['Raleway'] uppercase">
+            <p className="text-2xl font-semibold mb-4 font-['Raleway'] uppercase">
               Prosthodontist & Oral Implantologist
             </p>
             <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-4 font-['Open Sans']">

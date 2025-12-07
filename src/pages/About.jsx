@@ -6,6 +6,7 @@ import Expert from '../components/about/Experts'
 import AboutSection from '../components/AboutSection'
 import Testimonials from '../components/Testimonals'
 import VisionMission from '../components/about/Visionmission'
+import Booking from '../components/Booking'
 
 function About() {
   return (
@@ -17,6 +18,7 @@ function About() {
       <AboutSection />
       <Testimonials />
       <VisionMission/>
+      <Booking/>
     </div>
   )
 }

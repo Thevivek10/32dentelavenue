@@ -31,9 +31,8 @@ const DentistProfile = ({
 }) => {
   return (
     <div
-      className={`flex flex-col md:flex-row ${
-        reverse ? "md:flex-row-reverse" : ""
-      } items-center justify-center gap-12 md:gap-16 mb-16 md:mb-20`}
+      className={`flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""
+        } items-center justify-center gap-12 md:gap-16 mb-16 md:mb-20`}
     >
       {/* IMAGE SECTION */}
       <motion.div
@@ -48,7 +47,7 @@ const DentistProfile = ({
           className="w-[90%] md:w-[80%] h-[28rem] md:h-[36rem] object-cover rounded-3xl shadow-xl border-8 border-white"
           loading="lazy"
         />
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
+        <div className="absolute inset-0 rounded-3xl"></div>
       </motion.div>
 
       {/* TEXT SECTION */}
@@ -61,7 +60,7 @@ const DentistProfile = ({
         <h3 className="text-3xl md:text-5xl font-extrabold text-[#2c3e50] mb-3 font-['Raleway'] leading-tight">
           {name}
         </h3>
-        <h4 className="text-[#88d4cb] text-xl md:text-2xl font-bold uppercase tracking-wider mb-4 font-['Raleway']">
+        <h4 className="text-xl md:text-2xl font-bold uppercase tracking-wider mb-4 font-['Raleway']">
           {specialty}
         </h4>
         <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-4 font-['Open Sans']">
@@ -86,7 +85,7 @@ const TeamSection = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-6xl font-extrabold text-center text-[#2c3e50] mb-12 leading-tight font-['Raleway']"
         >
-          Meet Our <span className="text-[#88d4cb]">Expert</span> Dentists
+          Meet Our <span className="">Expert</span> Dentists
         </motion.h2>
 
         {/* PROFILES */}

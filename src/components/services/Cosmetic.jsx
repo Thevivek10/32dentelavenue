@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Booking from '../Booking';
+import docAnkita from '../../assets/images/1.jpg';
+import docAnuj from '../../assets/images/2.jpg';
 import {
     Smile,
     Sparkles,
@@ -129,7 +132,7 @@ const Cosmetic = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">Dental Treatments</h2>
-                        <p className="text-text-light max-w-2xl mx-auto">
+                        <p className="text-text-light max-w-4xl mx-auto">
                             Transform your confidence with personalized cosmetic dentistry solutions for stunning smile aesthetics.
                         </p>
                     </div>
@@ -160,7 +163,7 @@ const Cosmetic = () => {
                                 <span className="text-secondary-teal">Smiles That Inspire Confidence</span>
                             </h2>
                             <p className="text-text-light mb-8 text-lg">
-                                At 32 Dental Avenue, we’ve transformed hundreds of smiles with advanced cosmetic dentistry and personalized care. Explore real patient journeys and see how expert treatments, precision, and compassion helped them achieve the confident, radiant smiles they always dreamed of.
+                                At 32 Dental Avenue, we’ve transformed hundreds of smiles with advanced cosmetic dentistry and personalized care. Explore real patient journeys and see how expert treatments, precision, and compassion helped them achieve the confident, radiant smiles they always Wanted.
                             </p>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="bg-white p-6 rounded-xl shadow-sm">
@@ -200,9 +203,9 @@ const Cosmetic = () => {
                         <div className="bg-neutral-bg rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                             <div className="h-80 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    src={docAnkita}
                                     alt="Dr. Ankita Sharma Gambhir"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
                             <div className="p-8">
@@ -219,9 +222,9 @@ const Cosmetic = () => {
                         <div className="bg-neutral-bg rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                             <div className="h-80 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    src={docAnuj}
                                     alt="Dr. Anuj Gambhir"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
                             <div className="p-8">
@@ -297,7 +300,7 @@ const Cosmetic = () => {
             </section>
 
             {/* Bottom Info Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-periwinkle/10 to-secondary-teal/10">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#afabfd]/20 via-[#88d4cb]/20 to-[#76c4bb]/8">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6">
                         Advanced Cosmetic Dentistry in Rohini for Complete Smile Transformation
@@ -313,6 +316,8 @@ const Cosmetic = () => {
                     </button>
                 </div>
             </section>
+
+            <Booking />
 
             {/* FAQ Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">

@@ -11,6 +11,11 @@ import {
     CheckCircle2
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
+import docAnkita from '../../assets/images/1.jpg';
+import docAnuj from '../../assets/images/2.jpg';
+import serviceAligners from '../../assets/images/service-aligners.png';
+import serviceClearBraces from '../../assets/images/service-clear-braces.png';
+import serviceMetalBraces from '../../assets/images/service-metal-braces.png';
 
 const TeethAlignment = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -23,17 +28,20 @@ const TeethAlignment = () => {
         {
             title: "Clear Aligners",
             description: "Transparent, removable trays that straighten teeth discreetly and comfortably. Ideal for adults and teens looking for a flexible, lifestyle-friendly alignment option with predictable digital treatment planning.",
-            icon: <Smile className="w-8 h-8 text-secondary-teal" />
+            icon: <Smile className="w-8 h-8 text-secondary-teal" />,
+            image: serviceAligners
         },
         {
             title: "Clear Braces",
             description: "Tooth-colored ceramic braces that blend with your natural teeth, providing effective alignment with a more aesthetic, less noticeable appearance than traditional metal braces.",
-            icon: <Sparkles className="w-8 h-8 text-secondary-teal" />
+            icon: <Sparkles className="w-8 h-8 text-secondary-teal" />,
+            image: serviceClearBraces
         },
         {
             title: "Metal Braces",
             description: "A reliable and cost-effective orthodontic option for correcting crowding, spacing, and bite issues with strong, precise control over tooth movement.",
-            icon: <div className="w-8 h-8 rounded-full border-2 border-secondary-teal flex items-center justify-center text-secondary-teal font-bold text-xs">MB</div>
+            icon: <div className="w-8 h-8 rounded-full border-2 border-secondary-teal flex items-center justify-center text-secondary-teal font-bold text-xs">MB</div>,
+            image: serviceMetalBraces
         }
     ];
 
@@ -115,9 +123,9 @@ const TeethAlignment = () => {
                         <div className="bg-neutral-bg rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                             <div className="h-80 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    src={docAnkita}
                                     alt="Dr. Ankita Sharma Gambhir"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
                             <div className="p-8">
@@ -134,9 +142,9 @@ const TeethAlignment = () => {
                         <div className="bg-neutral-bg rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                             <div className="h-80 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    src={docAnuj}
                                     alt="Dr. Anuj Gambhir"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
                             <div className="p-8">
@@ -157,21 +165,30 @@ const TeethAlignment = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">Teeth Alignment Services</h2>
-                        <p className="text-text-light max-w-2xl mx-auto">
+                        <p className="text-text-light max-w-3xl mx-auto">
                             Perfecting your smile with modern, comfortable, and highly effective orthodontic solutions.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {services.map((service, index) => (
-                            <div key={index} className="bg-white p-8 rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20">
-                                <div className="mb-6 bg-neutral-bg w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
-                                    {service.icon}
+                            <div key={index} className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20 overflow-hidden">
+                                <div className="h-56 overflow-hidden">
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    />
                                 </div>
-                                <h3 className="text-xl font-bold text-text-charcoal mb-3">{service.title}</h3>
-                                <p className="text-text-light text-sm leading-relaxed">
-                                    {service.description}
-                                </p>
+                                <div className="p-8">
+                                    <div className="mb-6 bg-neutral-bg w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
+                                        {service.icon}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-text-charcoal mb-3">{service.title}</h3>
+                                    <p className="text-text-light text-sm leading-relaxed">
+                                        {service.description}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -280,7 +297,7 @@ const TeethAlignment = () => {
             <AppointmentBooking />
 
             {/* Bottom Info Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-periwinkle/10 to-secondary-teal/10">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#afabfd]/20 via-[#88d4cb]/20 to-[#76c4bb]/8">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6">
                         Advanced Teeth Alignment in Rohini

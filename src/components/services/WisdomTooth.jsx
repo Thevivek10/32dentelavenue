@@ -12,6 +12,11 @@ import {
     HeartPulse
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
+import docAnkita from '../../assets/images/1.jpg';
+import docAnuj from '../../assets/images/2.jpg';
+import serviceExtraction from '../../assets/images/service-extraction.png';
+import serviceSurgical from '../../assets/images/service-surgical.png';
+import serviceImpacted from '../../assets/images/service-impacted.png';
 
 const WisdomTooth = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -24,17 +29,20 @@ const WisdomTooth = () => {
         {
             title: "Painless Extraction",
             description: "Simple, non-surgical removal of fully erupted wisdom teeth under local anesthesia. A quick and virtually painless procedure for teeth that have grown in straight but need removal.",
-            icon: <HeartPulse className="w-8 h-8 text-secondary-teal" />
+            icon: <HeartPulse className="w-8 h-8 text-secondary-teal" />,
+            image: serviceExtraction
         },
         {
             title: "Surgical Extraction",
             description: "Specialized removal of broken, decayed, or complex wisdom teeth. Our expert surgeons ensure minimal discomfort and rapid healing through precise surgical techniques.",
-            icon: <Activity className="w-8 h-8 text-secondary-teal" />
+            icon: <Activity className="w-8 h-8 text-secondary-teal" />,
+            image: serviceSurgical
         },
         {
             title: "Impacted Wisdom Tooth Removal",
             description: "Expert surgical removal of impacted teeth trapped beneath the gum or bone. We use advanced imaging to plan safe extraction, preventing future pain, infection, and crowding.",
-            icon: <Zap className="w-8 h-8 text-secondary-teal" />
+            icon: <Zap className="w-8 h-8 text-secondary-teal" />,
+            image: serviceImpacted
         }
     ];
 
@@ -116,9 +124,9 @@ const WisdomTooth = () => {
                         <div className="bg-neutral-bg rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                             <div className="h-80 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    src={docAnkita}
                                     alt="Dr. Ankita Sharma Gambhir"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
                             <div className="p-8">
@@ -135,9 +143,9 @@ const WisdomTooth = () => {
                         <div className="bg-neutral-bg rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                             <div className="h-80 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    src={docAnuj}
                                     alt="Dr. Anuj Gambhir"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
                             <div className="p-8">
@@ -158,21 +166,30 @@ const WisdomTooth = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">Specialized Procedures</h2>
-                        <p className="text-text-light max-w-2xl mx-auto">
+                        <p className="text-text-light max-w-3xl mx-auto">
                             Expert surgical solutions for wisdom teeth, ensuring safety, comfort, and optimal oral health.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {services.map((service, index) => (
-                            <div key={index} className="bg-white p-8 rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20">
-                                <div className="mb-6 bg-neutral-bg w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
-                                    {service.icon}
+                            <div key={index} className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20 overflow-hidden">
+                                <div className="h-56 overflow-hidden">
+                                    <img
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    />
                                 </div>
-                                <h3 className="text-xl font-bold text-text-charcoal mb-3">{service.title}</h3>
-                                <p className="text-text-light text-sm leading-relaxed">
-                                    {service.description}
-                                </p>
+                                <div className="p-8">
+                                    <div className="mb-6 bg-neutral-bg w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
+                                        {service.icon}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-text-charcoal mb-3">{service.title}</h3>
+                                    <p className="text-text-light text-sm leading-relaxed">
+                                        {service.description}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -281,7 +298,7 @@ const WisdomTooth = () => {
             <AppointmentBooking />
 
             {/* Bottom Info Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-periwinkle/10 to-secondary-teal/10">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#afabfd]/20 via-[#88d4cb]/20 to-[#76c4bb]/8">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6">
                         Expert Wisdom Tooth Removal in Rohini
