@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Booking from '../Booking';
 import docAnkita from '../../assets/images/1.jpg';
-import docAnuj from '../../assets/images/2.jpg';
+import docAnuj from '../../assets/images/2.JPG';
 import {
     Smile,
     Sparkles,

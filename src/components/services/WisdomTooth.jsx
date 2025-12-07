@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
 import docAnkita from '../../assets/images/1.jpg';
-import docAnuj from '../../assets/images/2.jpg';
+import docAnuj from '../../assets/images/2.JPG';
 import serviceExtraction from '../../assets/images/service-extraction.png';
 import serviceSurgical from '../../assets/images/service-surgical.png';
 import serviceImpacted from '../../assets/images/service-impacted.png';

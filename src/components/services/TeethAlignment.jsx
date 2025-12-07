@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
 import docAnkita from '../../assets/images/1.jpg';
-import docAnuj from '../../assets/images/2.jpg';
+import docAnuj from '../../assets/images/2.JPG';
 import serviceAligners from '../../assets/images/service-aligners.png';
 import serviceClearBraces from '../../assets/images/service-clear-braces.png';
 import serviceMetalBraces from '../../assets/images/service-metal-braces.png';
