@@ -32,7 +32,7 @@ const iconComponents = {
 
 const Banner = () => {
   return (
-    <div className="relative overflow-hidden bg-[#f7f4f1] py-10 px-4 sm:px-6 lg:px-8">
+    <div className="relative overflow-hidden bg-[#8FC6B7] py-10 px-4 sm:px-6 lg:px-8">
       {/* Decorative Backgrounds */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-[#88d4cb]/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#afabfd]/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>

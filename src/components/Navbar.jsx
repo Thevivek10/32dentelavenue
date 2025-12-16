@@ -74,15 +74,15 @@ function Navbar() {
                   <Link to="/wisdom-tooth-surgery" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Wisdom Tooth Surgery
                   </Link>
-                  <a href="/home#root-canal" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                  <Link to="/root-canal-treatment" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Root Canal Treatment
-                  </a>
-                  <a href="/home#implants" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                  </Link>
+                  <Link to="/dental-implants" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Dental Implants
-                  </a>
-                  <a href="/home#hygiene" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                  </Link>
+                  <Link to="/oral-hygiene" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
                     Oral Hygiene & Preventive Care
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@ function Navbar() {
               className={`text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname === '/international-clients' ? 'bg-[#f7f4f1]/60' : ''
                 }`}
             >
-              International Clients
+              Dental Tourism
             </Link>
             <Link
               to="/about"
@@ -189,27 +189,27 @@ function Navbar() {
               >
                 Wisdom Tooth Surgery
               </Link>
-              <a
-                href="/home#root-canal"
+              <Link
+                to="/root-canal-treatment"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
               >
                 Root Canal Treatment
-              </a>
-              <a
-                href="/home#implants"
+              </Link>
+              <Link
+                to="/dental-implants"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
               >
                 Dental Implants
-              </a>
-              <a
-                href="/home#hygiene"
+              </Link>
+              <Link
+                to="/oral-hygiene"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
               >
                 Oral Hygiene
-              </a>
+              </Link>
             </div>
           </div>
           <Link
@@ -239,7 +239,7 @@ function Navbar() {
 
           <button
             onClick={() => setIsOpen(false)}
-            className="w-full mt-3 bg-[#88d4cb] text-white px-6 py-2.5 rounded-lg font-semibold transition-all hover:shadow-lg hover:shadow-[#88d4cb]/40"
+            className="w-full mt-3 bg-[#8FC6B7] text-white px-6 py-2.5 rounded-lg font-semibold transition-all hover:shadow-lg hover:shadow-[#88d4cb]/40"
           >
             Book Appointment
           </button>

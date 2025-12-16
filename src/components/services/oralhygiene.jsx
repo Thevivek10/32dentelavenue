@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
 import {
-    Smile,
-    Sparkles,
     ShieldCheck,
     Building2,
     Stethoscope,
     ChevronDown,
     ChevronUp,
     Clock,
-    CheckCircle2
+    CheckCircle2,
+    Activity,
+    Smile,
+    Award
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
 import docAnkita from '../../assets/images/1.jpg';
 import docAnuj from '../../assets/images/2.JPG';
-import serviceAligners from '../../assets/images/service-aligners.png';
-import serviceClearBraces from '../../assets/images/service-clear-braces.png';
-import serviceMetalBraces from '../../assets/images/service-metal-braces.png';
+
+// Using generated assets
+import heroImage from '../../assets/images/oral-hygiene/hero.png';
+import imgCheckup from '../../assets/images/oral-hygiene/checkup.png';
+import imgCleaning from '../../assets/images/oral-hygiene/cleaning.png';
+import imgFluoride from '../../assets/images/oral-hygiene/fluoride.png';
+import imgSealants from '../../assets/images/oral-hygiene/sealants.png';
+import imgScreening from '../../assets/images/oral-hygiene/screening.png';
+import imgPreventive from '../../assets/images/oral-hygiene/preventive.png';
+import imgSuccess from '../../assets/images/oral-hygiene/success.png';
 import Testimonals from '../review-services';
 
-const TeethAlignment = () => {
+const OralHygiene = () => {
     const [openFaq, setOpenFaq] = useState(null);
 
     const toggleFaq = (index) => {
@@ -27,78 +35,96 @@ const TeethAlignment = () => {
 
     const services = [
         {
-            title: "Clear Aligners",
-            description: "Transparent, removable trays that straighten teeth discreetly and comfortably. Ideal for adults and teens looking for a flexible, lifestyle-friendly alignment option with predictable digital treatment planning.",
+            title: "Dental Check-Up & Consultation",
+            description: "Comprehensive examination to detect early signs of cavities, gum disease, and other oral health issues. Personalized guidance helps maintain long-term dental health.",
+            icon: <Stethoscope className="w-8 h-8 text-secondary-teal" />,
+            image: imgCheckup
+        },
+        {
+            title: "Professional Teeth Cleaning",
+            description: "Removes plaque, tartar, and surface stains for a cleaner, brighter smile. Helps prevent cavities, bad breath, and gum problems.",
+            icon: <ShieldCheck className="w-8 h-8 text-secondary-teal" />,
+            image: imgCleaning
+        },
+        {
+            title: "Fluoride Treatments",
+            description: "Strengthens enamel and protects against tooth decay. Ideal for children, teens, and adults seeking added protection.",
+            icon: <Activity className="w-8 h-8 text-secondary-teal" />,
+            image: imgFluoride
+        },
+        {
+            title: "Dental Sealants",
+            description: "Thin protective coating applied to molars to prevent decay in grooves and pits. A simple, pain-free preventive solution for kids and adults.",
+            icon: <ShieldCheck className="w-8 h-8 text-secondary-teal" />,
+            image: imgSealants
+        },
+        {
+            title: "Oral Cancer & Gum Disease Screening",
+            description: "Early detection of gum problems, infections, and oral cancers for timely treatment and better outcomes.",
+            icon: <Activity className="w-8 h-8 text-secondary-teal" />,
+            image: imgScreening
+        },
+        {
+            title: "Preventive Care Plans",
+            description: "Personalized oral hygiene and recall plans designed to fit your dental needs, schedule, and risk factors, helping you maintain a healthy, problem-free smile year-round.",
             icon: <Smile className="w-8 h-8 text-secondary-teal" />,
-            image: serviceAligners
-        },
-        {
-            title: "Clear Braces",
-            description: "Tooth-colored ceramic braces that blend with your natural teeth, providing effective alignment with a more aesthetic, less noticeable appearance than traditional metal braces.",
-            icon: <Sparkles className="w-8 h-8 text-secondary-teal" />,
-            image: serviceClearBraces
-        },
-        {
-            title: "Metal Braces",
-            description: "A reliable and cost-effective orthodontic option for correcting crowding, spacing, and bite issues with strong, precise control over tooth movement.",
-            icon: <div className="w-8 h-8 rounded-full border-2 border-secondary-teal flex items-center justify-center text-secondary-teal font-bold text-xs">MB</div>,
-            image: serviceMetalBraces
+            image: imgPreventive
         }
     ];
 
     const faqs = [
         {
-            question: "Which top-rated orthodontic clinic offers the best teeth alignment treatments?",
-            answer: "Top-rated orthodontic clinic in Rohini provide advanced technology, experienced specialists, and personalized alignment plans. At 32 Dental Avenue, we offer clear aligners, braces, and digital orthodontics for precise, predictable results."
+            question: "What preventive dental treatments are available in Rohini Sector 5?",
+            answer: "At 32 Dental Avenue, we offer professional teeth cleaning, fluoride treatments, dental sealants, oral cancer and gum disease screening, and personalized check-ups. These preventive dental services in Rohini help maintain healthy teeth and gums."
         },
         {
-            question: "What types of teeth alignment braces are available at a dental clinic in Rohini?",
-            answer: "A good dental clinic in Rohini like 32 Dental Avenue, provides metal braces, ceramic (clear) braces, and self-ligating braces. Each option effectively corrects crooked teeth, spacing, and bite issues."
+            question: "How often should I visit a dentist for preventive care?",
+            answer: "It is recommended to schedule a dental check-up every 6 months. Regular visits with our dentists in Rohini Sector 5 ensure early detection of cavities, gum disease, and other oral health issues."
         },
         {
-            question: "What does teeth alignment treatment help with?",
-            answer: "Teeth alignment treatment fixes crooked teeth, gaps, overcrowding, and bite issues like overbite or underbite. It improves both appearance and oral health by ensuring proper positioning and function."
+            question: "Are preventive dental treatments painful?",
+            answer: "No. Most preventive procedures, such as scaling, polishing, fluoride application, and screenings, are painless or minimally uncomfortable, designed for patient comfort and safety."
         },
         {
-            question: "Are clear aligners a good option for teeth straightening?",
-            answer: "Yes. Clear aligners are a popular, nearly invisible, comfortable option for mild to moderate alignment issues. They allow easy cleaning, no food restrictions, and predictable digital treatment planning."
+            question: "How do dental sealants and fluoride help prevent cavities?",
+            answer: "Dental sealants protect deep grooves in teeth from decay, while fluoride treatments strengthen enamel. Together, they are effective, safe, and widely used in preventive dental care in Rohini."
         },
         {
-            question: "How painful is teeth alignment treatment?",
-            answer: "Teeth alignment isn’t usually painful, but mild pressure or discomfort is normal during adjustments or when switching aligner trays. This settles quickly and indicates that your teeth are moving correctly."
+            question: "Can preventive dental care stop gum disease and bad breath?",
+            answer: "Yes. Routine cleaning, early screenings, and proper oral hygiene guidance prevent gum disease, plaque buildup, and bad breath, ensuring long-term oral health."
         },
         {
-            question: "How long does teeth alignment take?",
-            answer: "Treatment time varies based on your case, ranging from 6 months to 24 months. Clear aligners and self-ligating braces may offer faster, more efficient results for suitable cases."
+            question: "Do children need preventive dental care too?",
+            answer: "Absolutely. Kids benefit from regular dental check-ups, fluoride treatments, and sealants to protect developing teeth and prevent early cavities. Our dentists in Rohini Sector 5 provide child-friendly, gentle care."
         }
     ];
 
     return (
         <div className="bg-neutral-bg min-h-screen pt-16 md:pt-20">
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-r from-[#f0f4f8] to-[#e0e7ff] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-                <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+            <section className="relative bg-gradient-to-r from-[#e8f4f2] to-[#f0f4f8] py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+                <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center mix-blend-overlay"></div>
                 <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <span className="inline-block py-1 px-3 rounded-full bg-secondary-teal/10 text-secondary-teal text-sm font-semibold mb-4">
-                            Teeth Alignment Treatment in Rohini, Delhi
+                            Healthy Teeth, Fresh Smiles
                         </span>
                         <h1 className="text-4xl md:text-6xl font-bold text-text-charcoal mb-6 leading-tight">
-                            Straight Teeth, <span className="text-secondary-teal">Confident Smile</span>
+                            Oral Hygiene & Preventive Dental Care in <span className="text-secondary-teal">Rohini, Delhi</span>
                         </h1>
                         <p className="text-lg text-text-light mb-8 max-w-xl">
-                            Experience painless, modern orthodontic care designed to correct gaps, crowding, and bite issues with ease.
+                            Keep your teeth and gums healthy with painless preventive care that stops cavities, gum disease, and dental problems before they start.
                         </p>
                         <button className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1">
                             Book an Appointment
                         </button>
                     </div>
                     <div className="relative">
-                        {/* Placeholder for Hero Image */}
+                        {/* Hero Image */}
                         <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
                             <img
-                                src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Straight Teeth Smile"
+                                src={heroImage}
+                                alt="Oral Hygiene"
                                 className="w-full h-auto object-cover"
                             />
                         </div>
@@ -106,7 +132,7 @@ const TeethAlignment = () => {
                 </div>
             </section>
 
-                        {/* Meet Our Expert Dentists */}
+            {/* Meet Our Expert Dentists */}
            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
@@ -211,17 +237,19 @@ const TeethAlignment = () => {
                     </div>
                 </div>
             </section>
-            {/* Teeth Alignment Services */}
+
+            {/* Services Section */}
+
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">Teeth Alignment Services</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">Oral Hygiene & Preventive Dental Care Services</h2>
                         <p className="text-text-light max-w-3xl mx-auto">
-                            Perfecting your smile with modern, comfortable, and highly effective orthodontic solutions.
+                            Protect your smile with modern, painless, and effective preventive dental solutions.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => (
                             <div key={index} className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 group border border-transparent hover:border-secondary-teal/20 overflow-hidden">
                                 <div className="h-56 overflow-hidden">
@@ -248,11 +276,11 @@ const TeethAlignment = () => {
 
             {/* Success Stories */}
             <Testimonals
-                mainTitle="SUCCESS STORIES"
-                subtitle="Real Patients, Real Smiles"
-                description="Discover inspiring journeys of our patients who transformed their smiles and lives with our expert teeth alignment treatments. From clear aligners to braces, see how personalized care and advanced orthodontics made a difference."
-             />
-
+                mainTitle="OUR SUCCESS STORIES"
+                subtitle="Expert Dental Care, Healthy Outcomes"
+                description=" 32 Dental Avenue, we’ve transformed countless lives with durable, natural-looking dental implants that restore missing teeth with complete comfort and stability. Our expert implant dentists in Rohini use advanced technology and personalized planning to rebuild smiles with precision and long-lasting strength."
+            />
+            
 
             {/* Our Facility */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
@@ -262,16 +290,16 @@ const TeethAlignment = () => {
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-4">
                                     <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 1" className="rounded-2xl shadow-lg w-full h-48 object-cover transform hover:scale-105 transition-transform duration-500" />
-                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 2" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 2" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
                                 </div>
                                 <div className="pt-8 space-y-4">
-                                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 3" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
-                                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 4" className="rounded-2xl shadow-lg w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 3" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
+                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facility 4" className="rounded-2xl shadow-lg w-full h-40 object-cover transform hover:scale-105 transition-transform duration-500" />
                                 </div>
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
-                            <span className="text-secondary-teal font-bold tracking-wider text-sm uppercase mb-2 block">Our Facility</span>
+                            <span className="text-secondary-teal font-bold tracking-wider text-sm uppercase mb-2 block">OUR FACILITY</span>
                             <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6">
                                 State-of-the-Art Dental Care at 32 Dental Avenue
                             </h2>
@@ -286,16 +314,16 @@ const TeethAlignment = () => {
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-text-charcoal mb-1">Advanced Dental Technology</h4>
-                                        <p className="text-text-light text-sm">Digital scanners, high-resolution X-rays, and CAD/CAM systems for accurate diagnoses.</p>
+                                        <p className="text-text-light text-sm">We use the latest dental innovations, including digital scanners, high-resolution X-rays, and CAD/CAM systems, to deliver accurate diagnoses and painless, precise treatments for every patient.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start">
                                     <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-secondary-teal">
-                                        <Smile className="w-6 h-6" />
+                                        <ShieldCheck className="w-6 h-6" />
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-text-charcoal mb-1">Digital Smile Design (DSD)</h4>
-                                        <p className="text-text-light text-sm">Map and preview your smile digitally for predictable results and customized planning.</p>
+                                        <p className="text-text-light text-sm">Our Digital Smile Design setup allows us to map and preview your smile digitally, offering predictable results, customized planning, and a clear vision of your final transformation before treatment begins.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start">
@@ -304,7 +332,7 @@ const TeethAlignment = () => {
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-text-charcoal mb-1">Sterilization & Safety Protocols</h4>
-                                        <p className="text-text-light text-sm">Strict international sterilization standards using Class-B autoclaves and advanced infection control.</p>
+                                        <p className="text-text-light text-sm">Our clinic follows strict international sterilization standards using Class-B autoclaves and advanced infection control systems to ensure safe, hygienic, and worry-free dental care for all.</p>
                                     </div>
                                 </div>
                             </div>
@@ -317,20 +345,17 @@ const TeethAlignment = () => {
             <AppointmentBooking />
 
             {/* Bottom Info Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#afabfd]/20 via-[#88d4cb]/20 to-[#76c4bb]/8">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#e0f2fe]/50 via-[#f0f9ff]/50 to-[#e8f4f2]/50">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6">
-                        Advanced Teeth Alignment in Rohini
+                        Advanced Preventive Dental Care in Rohini Sector 5
                     </h2>
                     <p className="text-text-light text-lg mb-8 leading-relaxed">
-                        At 32 Dental Avenue, we make achieving a beautifully aligned smile simple and stress-free. If you’re struggling with crooked teeth, spacing issues, or an uneven bite, our orthodontic specialists in Rohini, Delhi are here to guide you toward the perfect smile. Using advanced technology and precise digital planning, we create alignment treatments that are comfortable, effective, and tailored just for you.
+                        At 32 Dental Avenue, we make maintaining a healthy, confident smile simple and stress-free. If you’re looking for dental treatments in Rohini Sector 5 to prevent cavities, gum disease, or other oral health issues, our expert dentists in Rohini Sector 5 provide personalized, modern care tailored to your needs.
                     </p>
                     <p className="text-text-light text-lg mb-8 leading-relaxed">
-                        Choose from clear aligners, clear braces, or traditional braces, each designed to move your teeth gently and predictably. With expert monitoring and a patient-first approach, we ensure steady progress and long-lasting results. Step into a straighter smile and renewed confidence with 32 Dental Avenue.
+                        Using advanced diagnostic tools, digital X-rays, and gentle preventive techniques, we offer services like professional cleaning, fluoride treatment, sealants, and routine dental check-ups. Each procedure is designed to protect your teeth, maintain healthy gums, and prevent future problems. With careful monitoring and a patient-first approach, we ensure long-lasting oral health and a smile you can trust. Choose 32 Dental Avenue for reliable, preventive dental care near me.
                     </p>
-                    <button className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all">
-                        Book Your Transformation
-                    </button>
                 </div>
             </section>
 
@@ -339,7 +364,7 @@ const TeethAlignment = () => {
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">FAQ</h2>
-                        <p className="text-text-light">Your Guide to Braces, Aligners & Teeth Alignment</p>
+                        <p className="text-text-light mb-8">Everything You Need to Know About Dental Check-Ups</p>
                     </div>
 
                     <div className="space-y-4">
@@ -373,4 +398,4 @@ const TeethAlignment = () => {
     );
 };
 
-export default TeethAlignment;
+export default OralHygiene;

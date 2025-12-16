@@ -95,12 +95,14 @@ const CommitmentSection = () => {
             />
             
             {/* Secondary, Inset Image */}
-            <img 
-              src={secondaryImage}
-              alt="Secondary clinic room"
-              className="absolute w-1/2 h-100 -bottom-0 -right-0 object-cover rounded-xl shadow-2x1 border-4 border-white"
-              loading="lazy"
-            />
+              <div className="absolute bottom-6 right-6 w-44 md:w-72 bg-white rounded-xl p-2 shadow-2xl border border-white overflow-hidden">
+                <img 
+                  src={secondaryImage}
+                  alt="Secondary clinic room"
+                  className="w-full h-full object-cover rounded-lg"
+                  loading="lazy"
+                />
+              </div>
           </div>
 
         </div>

@@ -14,6 +14,11 @@ import {
 } from 'lucide-react';
 import Testimonials from './Testimonals';
 import AppointmentBooking from './Booking';
+// Images used in AboutSection (reused here for consistent layout)
+import mainImage from '../assets/images/aboutpng2.jpg';
+import secondaryImage from '../assets/images/Aboutimg1.jpg';
+// Doctor image for CTA
+import doctorImg from '../assets/images/1.jpg';
 
 const International = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -23,10 +28,10 @@ const International = () => {
     };
 
     const stats = [
-        { number: "10,000+", label: "Smiles Transformed" },
-        { number: "1,000+", label: "Successful Implants" },
-        { number: "85,000+", label: "Aesthetic Crowns Crafted" },
-        { number: "10+", label: "Years of Dental Excellence" }
+        { number: "10,000+", label: "Smiles Transformed", color: "#afabfd" },
+        { number: "1,000+", label: "Successful Implants", color: "#88d4cb" },
+        { number: "85,000+", label: "Aesthetic Crowns Crafted", color: "#ffbd59" },
+        { number: "10+", label: "Years of Dental Excellence", color: "#FF9AA2" }
     ];
 
     const features = [
@@ -135,48 +140,75 @@ const International = () => {
                 </div>
             </div>
 
-            {/* Stats Section */}
-            <div className="bg-[#f7f4f1] py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        {stats.map((stat, index) => (
-                            <div key={index} className="p-6">
-                                <h3 className="text-4xl md:text-5xl font-bold text-[#88d4cb] mb-2">{stat.number}</h3>
-                                <p className="text-[#424040] font-medium">{stat.label}</p>
-                            </div>
-                        ))}
-                    </div>
+            {/* Stats Section - Colorful Cards */}
+            <div className="max-w-7xl mx-auto px-4 -mt-16 relative z-30">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                    {stats.map((stat, index) => (
+                        <div key={index} className="bg-white p-6 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                            <h3 className="text-3xl md:text-4xl font-extrabold mb-2" style={{ color: stat.color }}>{stat.number}</h3>
+                            <p className="text-gray-600 font-medium text-sm md:text-base">{stat.label}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
 
-            {/* Why Choose Us */}
-            <div className="py-20 bg-white">
+            {/* Why Choose Us - Split Layout with Images */}
+            <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-[#424040] mb-4">Why Choose 32 Dental Avenue?</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Choosing the right clinic is the most important step of your dental tourism journey. We ensure every international patient receives world-class care.
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-12">
-                        {features.map((feature, index) => (
-                            <div key={index} className="flex gap-6 p-6 rounded-2xl hover:bg-[#f7f4f1] transition-colors duration-300">
-                                <div className="flex-shrink-0 mt-1">
-                                    {feature.icon}
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-[#424040] mb-3">{feature.title}</h3>
-                                    <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                                </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        {/* Left Column: Content */}
+                        <div className="flex flex-col gap-8">
+                            <div>
+                                <span className="text-[#88d4cb] font-bold uppercase tracking-wider text-sm">WHY CHOOSE US</span>
+                                <h2 className="text-4xl font-bold text-[#424040] mt-2 leading-tight">Why Choose 32 Dental Avenue?</h2>
+                                <p className="text-lg text-gray-600 max-w-3xl mt-6">
+                                    Choosing the right clinic is the most important step of your dental tourism journey. We ensure every international patient receives world-class care.
+                                </p>
                             </div>
-                        ))}
+
+                            <div className="grid gap-6">
+                                {features.map((feature, index) => (
+                                    <div key={index} className="flex gap-6 p-6 rounded-2xl hover:bg-[#f7f4f1] transition-colors duration-300">
+                                        <div className="flex-shrink-0 mt-1">
+                                            {feature.icon}
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl font-bold text-[#424040] mb-3">{feature.title}</h3>
+                                            <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Right Column: Large Image Layout (from International2) */}
+                        <div className="relative h-[600px] w-full hidden lg:block">
+                            {/* Main Image */}
+                            <div className="absolute top-0 right-0 w-[95%] h-[120%] rounded-[2rem] overflow-hidden shadow-2xl z-10">
+                                <img
+                                    src={mainImage}
+                                    alt="Modern Dental Clinic"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            {/* Secondary Image */}
+                            {/* <div className="absolute bottom-0 left-20 w-[60%] h-[60%] rounded-[2rem] overflow-hidden shadow-2xl z-20 border-8 border-[#f7f4f1]">
+                                <img
+                                    src={secondaryImage}
+                                    alt="Dentist Consultation"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div> */}
+                            {/* Decorative Circles */}
+                            <div className="absolute top-10 left-10 w-32 h-32 bg-[#ffbd59] rounded-full blur-3xl opacity-20 z-0"></div>
+                            <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#afabfd] rounded-full blur-3xl opacity-20 z-0"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* Value Propositions */}
-            <div className="bg-[#f7f4f1] py-20">
+            <div className="bg-[#8FC6B7] py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-3 gap-8">
                         <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
@@ -223,20 +255,57 @@ const International = () => {
             </div>
 
             {/* CTA Banner */}
-            <div className="bg-[#424040] py-16 text-white text-center">
-                <div className="max-w-4xl mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet the Leading Dental Experts</h2>
-                    <p className="text-lg text-gray-300 mb-8">
-                        Behind every confident smile is a team that genuinely cares. Our highly skilled dentists, implant specialists, and cosmetic experts ensure you receive world-class treatment.
-                    </p>
-                    <button className="bg-[#88d4cb] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#7bc0b8] transition-colors">
-                        Book a Consultation
-                    </button>
-                </div>
+          <div className="bg-gradient-to-br from-[#8FC6B7] to-[#7ab5a5] py-20 text-white relative overflow-hidden">
+    {/* Decorative circles */}
+    <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+    <div className="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+    
+    <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-left space-y-6">
+                <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                    Meet the Leading Dental Experts
+                </h2>
+                
+                <p className="text-lg text-white/90 leading-relaxed">
+                    Behind every confident smile is a team that genuinely cares. Our highly skilled dentists, implant specialists, and cosmetic experts ensure you receive world-class treatment.
+                </p>
+                
+                <button className="bg-white text-[#8FC6B7] px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mt-4">
+                    Book a Consultation
+                </button>
             </div>
+            
+            {/* Right Image Section */}
+                        <div className="relative">
+                            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
+                                <div className="aspect-square bg-gradient-to-br from-white/20 to-white/5 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                                    {/* Decorative elements */}
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="w-48 h-48 bg-white/10 rounded-full absolute top-8 right-8"></div>
+                                        <div className="w-32 h-32 bg-white/10 rounded-full absolute bottom-12 left-12"></div>
+                                    </div>
+
+                                    {/* Doctor image */}
+                                    <div className="relative z-10 text-center">
+                                        <img src={doctorImg} alt="Dr. at 32 Dental Avenue" className="mx-auto w-180 md:w-100 rounded-2xl object-cover" />
+                                    </div>
+                                </div>
+
+                                {/* Floating badge */}
+                                {/* <div className="absolute -bottom-4 -right-4 bg-white text-[#8FC6B7] px-6 py-3 rounded-full shadow-xl font-semibold text-sm">
+                                    Trusted Experts
+                                </div> */}
+                            </div>
+                        </div>
+        </div>
+    </div>
+</div>
 
             {/* Testimonials */}
             <Testimonials />
+            <AppointmentBooking />
 
             {/* FAQ Section */}
             <div className="py-20 bg-white">
@@ -269,7 +338,7 @@ const International = () => {
             </div>
 
             {/* Booking Section */}
-            <AppointmentBooking />
+            
         </div>
     );
 };

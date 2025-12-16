@@ -24,7 +24,7 @@ export default function AppointmentBooking() {
   };
 
   return (
-    <div className="bg-[#f7f4f1] w-full py-12 md:py-1 mt-10">
+    <div className="bg-[#8FC6B7] w-full py-12 md:py-16 lg:py-20 overflow-hidden">
       {/* Section Wrapper */}
       <div className="w-full max-w-[1600px] mx-auto">
         {/* Header */}

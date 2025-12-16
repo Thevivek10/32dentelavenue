@@ -106,7 +106,7 @@ function Hero() {
             <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a
                 href={slides[current].primaryHref}
-                className="inline-block bg-secondary-teal text-neutral-white font-semibold px-8 py-4 rounded-lg hover:bg-secondary-teal/90 transition-all duration-300 shadow-lg hover:shadow-xl text-center"
+                className="inline-block bg-[#8FC6B7] text-neutral-white font-semibold px-8 py-4 rounded-lg hover:bg-[#7EBBAA] transition-all duration-300 shadow-lg hover:shadow-xl text-center"
               >
                 {slides[current].primaryLabel}
               </a>

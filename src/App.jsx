@@ -17,6 +17,9 @@ import Cosmetic from './components/services/Cosmetic'
 import TeethAlignment from './components/services/TeethAlignment'
 import WisdomTooth from './components/services/WisdomTooth'
 
+import RootCanal from './components/services/Root-cannel'
+import DentalImplants from './components/services/Dentel-implants'
+import OralHygiene from './components/services/oralhygiene'
 
 function HomePage() {
   return (
@@ -47,6 +50,9 @@ function App() {
           <Route path="/cosmetic-dentistry" element={<Cosmetic />} />
           <Route path="/teeth-alignment" element={<TeethAlignment />} />
           <Route path="/wisdom-tooth-surgery" element={<WisdomTooth />} />
+          <Route path="/root-canal-treatment" element={<RootCanal />} />
+          <Route path="/dental-implants" element={<DentalImplants />} />
+          <Route path="/oral-hygiene" element={<OralHygiene />} />
         </Routes>
         <Footer />
       </div>

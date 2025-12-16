@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Booking from '../Booking';
 import docAnkita from '../../assets/images/1.jpg';
 import docAnuj from '../../assets/images/2.JPG';
+import Testimonials from '../review-services.jsx';
 import {
     Smile,
     Sparkles,
@@ -154,85 +155,107 @@ const Cosmetic = () => {
             </section>
 
             {/* Success Stories */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6">
-                                OUR SUCCESS STORIES<br />
-                                <span className="text-secondary-teal">Smiles That Inspire Confidence</span>
-                            </h2>
-                            <p className="text-text-light mb-8 text-lg">
-                                At 32 Dental Avenue, we’ve transformed hundreds of smiles with advanced cosmetic dentistry and personalized care. Explore real patient journeys and see how expert treatments, precision, and compassion helped them achieve the confident, radiant smiles they always Wanted.
-                            </p>
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="bg-white p-6 rounded-xl shadow-sm">
-                                    <h4 className="text-3xl font-bold text-secondary-teal mb-1">500+</h4>
-                                    <p className="text-text-light text-sm">Smile Makeovers</p>
-                                </div>
-                                <div className="bg-white p-6 rounded-xl shadow-sm">
-                                    <h4 className="text-3xl font-bold text-secondary-teal mb-1">100%</h4>
-                                    <p className="text-text-light text-sm">Patient Satisfaction</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            {/* Placeholders for Success Stories - Replace with generated images later */}
-                            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Success Story 1" className="rounded-2xl shadow-lg w-full h-64 object-cover mt-8" />
-                            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Success Story 2" className="rounded-2xl shadow-lg w-full h-64 object-cover" />
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Testimonials />
 
             {/* Meet Our Expert Dentists */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+           <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
                 <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">Meet Our Expert Dentists</h2>
-                        <p className="text-text-light max-w-2xl mx-auto">
-                            Great results come from a team that listens, understands, and delivers with excellence. Our experienced dentists and caring clinical staff ensure you feel supported throughout every treatment.
-                        </p>
-                        <button className="mt-6 bg-primary-periwinkle text-white px-6 py-2 rounded-full font-semibold hover:bg-[#9a96f0] transition-colors">
-                            Book A Consultation
-                        </button>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                        {/* Dr. Ankita Sharma Gambhir */}
-                        <div className="bg-neutral-bg rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
-                            <div className="h-80 overflow-hidden">
-                                <img
-                                    src={docAnkita}
-                                    alt="Dr. Ankita Sharma Gambhir"
-                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                                />
+                    <div className="grid lg:grid-cols-3 gap-12 items-start">
+                        {/* Left Content */}
+                        <div className="lg:col-span-1">
+                            <div className="inline-block mb-4">
+                                <span className="text-[#8FC6B7] font-semibold text-sm flex items-center gap-2">
+                                    <span className="w-2 h-2 bg-[#8FC6B7] rounded-full"></span>
+                                    OUR TEAM
+                                </span>
                             </div>
-                            <div className="p-8">
-                                <h3 className="text-2xl font-bold text-text-charcoal mb-2">Dr. Ankita Sharma Gambhir</h3>
-                                <p className="text-secondary-teal font-semibold mb-4">Pediatric Dentist</p>
-                                <div className="space-y-2 text-text-light text-sm">
-                                    <p className="flex items-center"><Stethoscope className="w-4 h-4 mr-2" /> MDS – Pedodontics & Preventive Dentistry</p>
-                                    <p className="flex items-center"><Clock className="w-4 h-4 mr-2" /> 10+ Years of Experience</p>
-                                </div>
-                            </div>
+                            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                                Meet Our Expert Dentists
+                            </h2>
+                            <p className="text-gray-600 mb-8 leading-relaxed">
+                                Great results come from a team that listens, understands, and delivers with excellence. Our experienced dentists and caring clinical staff ensure you feel supported throughout every treatment.
+                            </p>
+                            <button className="bg-[#8FC6B7] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#76c4bb] transition-colors flex items-center gap-2 group">
+                                Book A Consultation
+                                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                            </button>
                         </div>
 
-                        {/* Dr. Anuj Gambhir */}
-                        <div className="bg-neutral-bg rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
-                            <div className="h-80 overflow-hidden">
-                                <img
-                                    src={docAnuj}
-                                    alt="Dr. Anuj Gambhir"
-                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                                />
+                        {/* Right Cards */}
+                        <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
+                            {/* Dr. Ankita Sharma Gambhir */}
+                            <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                                <div className="relative h-96">
+                                    <img
+                                        src={docAnkita}
+                                        alt="Dr. Ankita Sharma Gambhir"
+                                        className="w-full h-full object-cover object-center"
+                                    />
+                                    {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                                        <span className="bg-pink-500 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                                            Dental Expert
+                                        </span>
+                                    </div> */}
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Ankita Sharma Gambhir</h3>
+                                    <div className="space-y-2 text-sm text-gray-600">
+                                        <p className="flex items-start gap-2">
+                                            <Stethoscope className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
+                                            <span>Pediatric Dentist</span>
+                                        </p>
+                                        <p className="flex items-start gap-2">
+                                            <Clock className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
+                                            <span>10+ Years of experience</span>
+                                        </p>
+                                        <p className="flex items-start gap-2">
+                                            <svg className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <span>MDS – Pedodontics & Preventive Dentistry</span>
+                                        </p>
+                                    </div>
+                                    <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                                        A pediatric dentistry specialist with 10+ years of experience, delivering gentle, child-friendly care with advanced techniques.
+                                    </p>
+                                </div>
                             </div>
-                            <div className="p-8">
-                                <h3 className="text-2xl font-bold text-text-charcoal mb-2">Dr. Anuj Gambhir</h3>
-                                <p className="text-secondary-teal font-semibold mb-4">Prosthodontist & Oral Implantologist</p>
-                                <div className="space-y-2 text-text-light text-sm">
-                                    <p className="flex items-center"><Stethoscope className="w-4 h-4 mr-2" /> MDS – Prosthodontics, Crown & Bridge</p>
-                                    <p className="flex items-center"><Clock className="w-4 h-4 mr-2" /> 10+ Years of Experience</p>
+
+                            {/* Dr. Anuj Gambhir */}
+                            <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                                <div className="relative h-96">
+                                    <img
+                                        src={docAnuj}
+                                        alt="Dr. Anuj Gambhir"
+                                        className="w-full h-full object-cover object-center"
+                                    />
+                                    {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                                        <span className="bg-pink-500 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                                            Dental Expert
+                                        </span>
+                                    </div> */}
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Dr. Anuj Gambhir</h3>
+                                    <div className="space-y-2 text-sm text-gray-600">
+                                        <p className="flex items-start gap-2">
+                                            <Stethoscope className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
+                                            <span>Prosthodontist & Oral Implantologist</span>
+                                        </p>
+                                        <p className="flex items-start gap-2">
+                                            <Clock className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
+                                            <span>10+ Years of experience</span> 
+                                        </p>
+                                        <p className="flex items-start gap-2">
+                                            <svg className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <span>MDS – Prosthodontics, Crown & Bridge</span>
+                                        </p>
+                                    </div>
+                                    <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                                        A prosthodontics expert with 10+ years of experience, specializing in dental implants and advanced restorative procedures.
+                                    </p>
                                 </div>
                             </div>
                         </div>

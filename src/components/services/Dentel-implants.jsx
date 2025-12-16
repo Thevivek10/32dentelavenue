@@ -1,24 +1,29 @@
 import React, { useState } from 'react';
 import {
-    Smile,
-    Sparkles,
     ShieldCheck,
     Building2,
     Stethoscope,
     ChevronDown,
     ChevronUp,
     Clock,
-    CheckCircle2
+    CheckCircle2,
+    Activity,
+    Smile,
+    Award
 } from 'lucide-react';
 import AppointmentBooking from '../Booking';
 import docAnkita from '../../assets/images/1.jpg';
 import docAnuj from '../../assets/images/2.JPG';
-import serviceAligners from '../../assets/images/service-aligners.png';
-import serviceClearBraces from '../../assets/images/service-clear-braces.png';
-import serviceMetalBraces from '../../assets/images/service-metal-braces.png';
+
+// Using generated assets
+import heroImage from '../../assets/images/dental-implants/hero.png';
+import imgSingle from '../../assets/images/dental-implants/single.png';
+import imgMultiple from '../../assets/images/dental-implants/multiple.png';
+import imgFullMouth from '../../assets/images/dental-implants/full_mouth.png';
+import imgSuccess from '../../assets/images/dental-implants/success.png';
 import Testimonals from '../review-services';
 
-const TeethAlignment = () => {
+const DentalImplants = () => {
     const [openFaq, setOpenFaq] = useState(null);
 
     const toggleFaq = (index) => {
@@ -27,49 +32,49 @@ const TeethAlignment = () => {
 
     const services = [
         {
-            title: "Clear Aligners",
-            description: "Transparent, removable trays that straighten teeth discreetly and comfortably. Ideal for adults and teens looking for a flexible, lifestyle-friendly alignment option with predictable digital treatment planning.",
+            title: "Single Tooth Implant",
+            description: "A perfect solution to replace one missing tooth with a natural-looking, permanent implant. It restores full chewing strength and blends seamlessly with your existing teeth.",
+            icon: <Award className="w-8 h-8 text-secondary-teal" />,
+            image: imgSingle
+        },
+        {
+            title: "Multiple Teeth Implants",
+            description: "Ideal for patients missing several teeth in a row. These implants support bridges without affecting neighboring teeth, offering strong, stable, and long-lasting results.",
+            icon: <Activity className="w-8 h-8 text-secondary-teal" />,
+            image: imgMultiple
+        },
+        {
+            title: "Full Mouth Implants (All-on-4 / All-on-6)",
+            description: "A complete smile restoration option that replaces an entire arch of teeth with minimal implants. Provides maximum stability, improved function, and a fixed, natural-looking set of teeth.",
             icon: <Smile className="w-8 h-8 text-secondary-teal" />,
-            image: serviceAligners
-        },
-        {
-            title: "Clear Braces",
-            description: "Tooth-colored ceramic braces that blend with your natural teeth, providing effective alignment with a more aesthetic, less noticeable appearance than traditional metal braces.",
-            icon: <Sparkles className="w-8 h-8 text-secondary-teal" />,
-            image: serviceClearBraces
-        },
-        {
-            title: "Metal Braces",
-            description: "A reliable and cost-effective orthodontic option for correcting crowding, spacing, and bite issues with strong, precise control over tooth movement.",
-            icon: <div className="w-8 h-8 rounded-full border-2 border-secondary-teal flex items-center justify-center text-secondary-teal font-bold text-xs">MB</div>,
-            image: serviceMetalBraces
+            image: imgFullMouth
         }
     ];
 
     const faqs = [
         {
-            question: "Which top-rated orthodontic clinic offers the best teeth alignment treatments?",
-            answer: "Top-rated orthodontic clinic in Rohini provide advanced technology, experienced specialists, and personalized alignment plans. At 32 Dental Avenue, we offer clear aligners, braces, and digital orthodontics for precise, predictable results."
+            question: "How much do dental implants cost in Rohini or Delhi?",
+            answer: "Dental implant cost in Rohini varies based on implant brand, bone support, and type of restoration. Prices generally start from ₹18,000–₹45,000 per implant, with transparent plans at 32 Dental Avenue."
         },
         {
-            question: "What types of teeth alignment braces are available at a dental clinic in Rohini?",
-            answer: "A good dental clinic in Rohini like 32 Dental Avenue, provides metal braces, ceramic (clear) braces, and self-ligating braces. Each option effectively corrects crooked teeth, spacing, and bite issues."
+            question: "Are dental implants painful?",
+            answer: "No. Implant placement is done under local anesthesia, making it painless and comfortable. Mild soreness after surgery is normal and easily manageable with medication."
         },
         {
-            question: "What does teeth alignment treatment help with?",
-            answer: "Teeth alignment treatment fixes crooked teeth, gaps, overcrowding, and bite issues like overbite or underbite. It improves both appearance and oral health by ensuring proper positioning and function."
+            question: "How long do dental implants last?",
+            answer: "With proper brushing, flossing, and regular check-ups, dental implants can last 15–25 years or even a lifetime. They are the longest-lasting tooth replacement option."
         },
         {
-            question: "Are clear aligners a good option for teeth straightening?",
-            answer: "Yes. Clear aligners are a popular, nearly invisible, comfortable option for mild to moderate alignment issues. They allow easy cleaning, no food restrictions, and predictable digital treatment planning."
+            question: "Am I the right candidate for dental implants?",
+            answer: "You may be a good candidate if you have one or more missing teeth, good oral health, and sufficient bone density (or can undergo grafting). A dental check-up and X-ray confirm suitability."
         },
         {
-            question: "How painful is teeth alignment treatment?",
-            answer: "Teeth alignment isn’t usually painful, but mild pressure or discomfort is normal during adjustments or when switching aligner trays. This settles quickly and indicates that your teeth are moving correctly."
+            question: "How long does the dental implant procedure take?",
+            answer: "The implant placement itself takes 30–60 minutes. Healing (osseointegration) takes 3–6 months, after which the crown (tooth cap) is placed."
         },
         {
-            question: "How long does teeth alignment take?",
-            answer: "Treatment time varies based on your case, ranging from 6 months to 24 months. Clear aligners and self-ligating braces may offer faster, more efficient results for suitable cases."
+            question: "Can dental implants replace dentures or multiple missing teeth?",
+            answer: "Yes. Options like All-on-4, All-on-6, full-mouth implants, and implant-supported dentures can replace multiple missing teeth with stable, natural-looking results."
         }
     ];
 
@@ -81,24 +86,24 @@ const TeethAlignment = () => {
                 <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <span className="inline-block py-1 px-3 rounded-full bg-secondary-teal/10 text-secondary-teal text-sm font-semibold mb-4">
-                            Teeth Alignment Treatment in Rohini, Delhi
+                            Strong Bite, Natural Smile
                         </span>
                         <h1 className="text-4xl md:text-6xl font-bold text-text-charcoal mb-6 leading-tight">
-                            Straight Teeth, <span className="text-secondary-teal">Confident Smile</span>
+                            Long-Lasting Dental Implants in <span className="text-secondary-teal">Rohini, Delhi</span>
                         </h1>
                         <p className="text-lg text-text-light mb-8 max-w-xl">
-                            Experience painless, modern orthodontic care designed to correct gaps, crowding, and bite issues with ease.
+                            Painless tooth replacement with advanced dental implants designed to restore your smile with complete comfort.
                         </p>
                         <button className="bg-secondary-teal text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all transform hover:-translate-y-1">
                             Book an Appointment
                         </button>
                     </div>
                     <div className="relative">
-                        {/* Placeholder for Hero Image */}
+                        {/* Hero Image */}
                         <div className="rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
                             <img
-                                src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Straight Teeth Smile"
+                                src={heroImage}
+                                alt="Dental Implants"
                                 className="w-full h-auto object-cover"
                             />
                         </div>
@@ -211,13 +216,14 @@ const TeethAlignment = () => {
                     </div>
                 </div>
             </section>
-            {/* Teeth Alignment Services */}
+
+            {/* Services Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">Teeth Alignment Services</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">Dental Implants</h2>
                         <p className="text-text-light max-w-3xl mx-auto">
-                            Perfecting your smile with modern, comfortable, and highly effective orthodontic solutions.
+                            Rebuild your smile with safe, durable, and natural-looking tooth replacement solutions.
                         </p>
                     </div>
 
@@ -247,12 +253,11 @@ const TeethAlignment = () => {
             </section>
 
             {/* Success Stories */}
-            <Testimonals
-                mainTitle="SUCCESS STORIES"
-                subtitle="Real Patients, Real Smiles"
-                description="Discover inspiring journeys of our patients who transformed their smiles and lives with our expert teeth alignment treatments. From clear aligners to braces, see how personalized care and advanced orthodontics made a difference."
-             />
-
+            <Testimonals 
+                mainTitle="OUR SUCCESS STORIES"
+                subtitle="Rebuilt Smiles That Bring Joy Back"
+                description="At 32 Dental Avenue, we’ve transformed countless lives with durable, natural-looking dental implants that restore missing teeth with complete comfort and stability. Our expert implant dentists in Rohini use advanced technology and personalized planning to rebuild smiles with precision and long-lasting strength."
+            />
 
             {/* Our Facility */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">
@@ -271,7 +276,7 @@ const TeethAlignment = () => {
                             </div>
                         </div>
                         <div className="order-1 lg:order-2">
-                            <span className="text-secondary-teal font-bold tracking-wider text-sm uppercase mb-2 block">Our Facility</span>
+                            <span className="text-secondary-teal font-bold tracking-wider text-sm uppercase mb-2 block">OUR FACILITY</span>
                             <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6">
                                 State-of-the-Art Dental Care at 32 Dental Avenue
                             </h2>
@@ -286,16 +291,16 @@ const TeethAlignment = () => {
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-text-charcoal mb-1">Advanced Dental Technology</h4>
-                                        <p className="text-text-light text-sm">Digital scanners, high-resolution X-rays, and CAD/CAM systems for accurate diagnoses.</p>
+                                        <p className="text-text-light text-sm">We use the latest dental innovations, including digital scanners, high-resolution X-rays, and CAD/CAM systems, to deliver accurate diagnoses and painless, precise treatments for every patient.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start">
                                     <div className="bg-white p-3 rounded-lg shadow-sm mr-4 text-secondary-teal">
-                                        <Smile className="w-6 h-6" />
+                                        <ShieldCheck className="w-6 h-6" />
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-text-charcoal mb-1">Digital Smile Design (DSD)</h4>
-                                        <p className="text-text-light text-sm">Map and preview your smile digitally for predictable results and customized planning.</p>
+                                        <p className="text-text-light text-sm">Our Digital Smile Design setup allows us to map and preview your smile digitally, offering predictable results, customized planning, and a clear vision of your final transformation before treatment begins.</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start">
@@ -304,7 +309,7 @@ const TeethAlignment = () => {
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-text-charcoal mb-1">Sterilization & Safety Protocols</h4>
-                                        <p className="text-text-light text-sm">Strict international sterilization standards using Class-B autoclaves and advanced infection control.</p>
+                                        <p className="text-text-light text-sm">Our clinic follows strict international sterilization standards using Class-B autoclaves and advanced infection control systems to ensure safe, hygienic, and worry-free dental care for all.</p>
                                     </div>
                                 </div>
                             </div>
@@ -320,17 +325,14 @@ const TeethAlignment = () => {
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#afabfd]/20 via-[#88d4cb]/20 to-[#76c4bb]/8">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-6">
-                        Advanced Teeth Alignment in Rohini
+                        Durable, Painless Dental Implants in Rohini
                     </h2>
                     <p className="text-text-light text-lg mb-8 leading-relaxed">
-                        At 32 Dental Avenue, we make achieving a beautifully aligned smile simple and stress-free. If you’re struggling with crooked teeth, spacing issues, or an uneven bite, our orthodontic specialists in Rohini, Delhi are here to guide you toward the perfect smile. Using advanced technology and precise digital planning, we create alignment treatments that are comfortable, effective, and tailored just for you.
+                        At 32 Dental Avenue, we make replacing missing teeth simple, safe, and stress-free. If you’re struggling with tooth loss, weak chewing, or an unstable denture, our implant specialists in Rohini, Delhi are here to restore your smile with precision and complete comfort. Using digital scans, guided implant placement, and advanced surgical techniques, we create implant solutions that look natural and last for years.
                     </p>
                     <p className="text-text-light text-lg mb-8 leading-relaxed">
-                        Choose from clear aligners, clear braces, or traditional braces, each designed to move your teeth gently and predictably. With expert monitoring and a patient-first approach, we ensure steady progress and long-lasting results. Step into a straighter smile and renewed confidence with 32 Dental Avenue.
+                        Choose from single tooth implants, multiple teeth implants, or full-mouth implants (All-on-4 / All-on-6), each designed to offer strong support, a natural bite, and long-term durability. With expert planning and a patient-first approach, we ensure predictable healing, stable function, and a confident smile you can trust.
                     </p>
-                    <button className="bg-secondary-teal text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-[#76c4bb] transition-all">
-                        Book Your Transformation
-                    </button>
                 </div>
             </section>
 
@@ -339,7 +341,6 @@ const TeethAlignment = () => {
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-text-charcoal mb-4">FAQ</h2>
-                        <p className="text-text-light">Your Guide to Braces, Aligners & Teeth Alignment</p>
                     </div>
 
                     <div className="space-y-4">
@@ -373,4 +374,4 @@ const TeethAlignment = () => {
     );
 };
 
-export default TeethAlignment;
+export default DentalImplants;

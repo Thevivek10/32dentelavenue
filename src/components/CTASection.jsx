@@ -5,7 +5,7 @@ const Banner = 'https://i.ibb.co/0Vh1mYVt/IMG-0428.jpg';
 
 export default function DentalCTA() {
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="py-20 bg-[#8FC6B7] overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative bg-[#f7f4f1] rounded-[2.5rem] overflow-hidden shadow-sm">
           <div className="grid lg:grid-cols-2 gap-0">
