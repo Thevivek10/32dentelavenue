@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 // const Banner = "https://i.ibb.co/0Vh1mYVt/IMG-0428.jpg";
-import Banner from "../assets/images/CTA-IMAGE.jpg";
+import Banner from "../assets/images/CTA-IMAGE.JPG";
 
 export default function DentalCTA() {
   return (
