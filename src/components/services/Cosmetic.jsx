@@ -17,6 +17,9 @@ import {
     Clock,
     Calendar
 } from 'lucide-react';
+import clearBracesImg from '../../assets/images/service-clear-braces.png';
+import clearAlignersImg from '../../assets/images/service-aligners.png';
+import whiteningImg from '../../assets/images/teeth-whitening.png';
 
 const Cosmetic = () => {
     const [openFaq, setOpenFaq] = useState(null);
@@ -28,43 +31,35 @@ const Cosmetic = () => {
     const treatments = [
         {
             title: "Smile Makeover",
-            description: "Transform your smile with a customized Hollywood Smile Makeover using veneers, whitening, and contouring techniques designed to enhance aesthetics, symmetry, and overall facial harmony.",
-            icon: <Sparkles className="w-8 h-8 text-secondary-teal" />
+            image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
         },
         {
             title: "Composite Fillings",
-            description: "Composite fillings repair decayed or chipped teeth using tooth-colored resin that blends naturally, restores function, and enhances smile aesthetics with a minimally invasive, affordable cosmetic solution.",
-            icon: <Gem className="w-8 h-8 text-secondary-teal" />
+            image: "https://plus.unsplash.com/premium_photo-1674586615555-d3c5f498b368?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             title: "Tooth-Colored Crowns & Bridges",
-            description: "Tooth-colored crowns and bridges restore damaged or missing teeth using durable, natural-looking materials that improve bite strength, aesthetics, and long-term oral health seamlessly.",
-            icon: <Crown className="w-8 h-8 text-secondary-teal" />
+            image: "https://plus.unsplash.com/premium_photo-1675666792361-b844bf679cb0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             title: "Partial Crowns / Inlays & Onlays",
-            description: "Inlays and onlays restore moderately damaged teeth using strong, custom restorations that preserve natural structure while delivering long-lasting strength, stability, and improved tooth aesthetics.",
-            icon: <ShieldCheck className="w-8 h-8 text-secondary-teal" />
+            image: "https://plus.unsplash.com/premium_photo-1661601362837-97e39a584095?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             title: "Veneers",
-            description: "Dental veneers are ultra-thin porcelain or composite shells that correct gaps, stains, chips, and misalignment, providing a flawless, long-lasting smile enhancement with minimal tooth preparation.",
-            icon: <Smile className="w-8 h-8 text-secondary-teal" />
+            image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
         },
         {
             title: "Clear Braces",
-            description: "Clear braces straighten misaligned teeth using discreet, tooth-colored brackets that provide reliable orthodontic correction while maintaining a more aesthetic, less noticeable appearance during treatment.",
-            icon: <div className="w-8 h-8 rounded-full border-2 border-secondary-teal flex items-center justify-center text-secondary-teal font-bold text-xs">CB</div>
+            image: clearBracesImg
         },
         {
             title: "Clear Aligners",
-            description: "Clear aligners use transparent, removable trays to gradually straighten teeth with comfort and precision, offering a highly aesthetic, convenient alternative to traditional braces for all ages.",
-            icon: <div className="w-8 h-8 rounded-full border-2 border-secondary-teal flex items-center justify-center text-secondary-teal font-bold text-xs">CA</div>
+            image: clearAlignersImg
         },
         {
             title: "Teeth Whitening / Bleaching",
-            description: "Professional teeth whitening lifts deep stains and brightens your smile instantly using safe, high-quality bleaching agents for dramatic, long-lasting whitening results in a single session.",
-            icon: <Sparkles className="w-8 h-8 text-secondary-teal" />
+            image: whiteningImg
         }
     ];
 
@@ -140,14 +135,17 @@ const Cosmetic = () => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {treatments.map((treatment, index) => (
-                            <div key={index} className="bg-neutral-bg p-8 rounded-2xl hover:shadow-lg transition-all duration-300 group border border-transparent hover:border-secondary-teal/20">
-                                <div className="mb-6 bg-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
-                                    {treatment.icon}
+                            <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                                <div className="aspect-[4/3] w-full overflow-hidden">
+                                    <img
+                                        src={treatment.image}
+                                        alt={treatment.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    />
                                 </div>
-                                <h3 className="text-xl font-bold text-text-charcoal mb-3">{treatment.title}</h3>
-                                <p className="text-text-light text-sm leading-relaxed">
-                                    {treatment.description}
-                                </p>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6">
+                                    <h3 className="text-xl font-bold text-white mb-2">{treatment.title}</h3>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -158,7 +156,7 @@ const Cosmetic = () => {
             <Testimonials />
 
             {/* Meet Our Expert Dentists */}
-           <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f7f7f7]">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                         {/* Left Content */}
@@ -244,7 +242,7 @@ const Cosmetic = () => {
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <Clock className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
-                                            <span>10+ Years of experience</span> 
+                                            <span>10+ Years of experience</span>
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <svg className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

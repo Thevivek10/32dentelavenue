@@ -19,7 +19,7 @@ const dentists = [
       "MDS – Prosthodontics, Crown & Bridge, and Implant Dentistry",
     experience: "10+ Years of Experience",
     imageUrl: drAnujImage,
-    
+
   },
 ];
 
@@ -43,30 +43,30 @@ const DentistProfile = ({
         <img
           src={imageUrl}
           alt={name}
-          className="w-full h-[400px] md:h-[500px] lg:h-[550px] object-cover"
+          className="w-full aspect-[2/2] object-cover object-top"
           loading="lazy"
         />
       </div>
 
       {/* TEXT SECTION */}
       <div className="p-8 md:p-10 space-y-4">
-        <h3 className="text-3xl md:text-4xl font-bold text-[#2c3e50] font-['Raleway'] leading-tight">
+        <h3 className="text-2xl md:text-2xl font-bold text-[#2c3e50] font-['Roboto Slab'] leading-tight">
           {name}
         </h3>
-        
-        <h4 className="text-lg md:text-xl font-semibold text-[#2c3e50] font-['Raleway']">
+
+        <h4 className="text-lg md:text-lg font-semibold text-[#2c3e50] font-['Raleway']">
           {specialty}
         </h4>
-        
+
         <div className="space-y-2 text-gray-600">
-          <p className="flex items-start gap-2 text-base md:text-lg font-['Open Sans']">
+          <p className="flex items-start gap-2 text-base md:text-base font-['Raleway']">
             <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             {qualifications}
           </p>
-          
-          <p className="flex items-start gap-2 text-base md:text-lg font-['Open Sans']">
+
+          <p className="flex items-start gap-2 text-base md:text-base font-['Raleway']">
             <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -80,7 +80,7 @@ const DentistProfile = ({
 
 const TeamSection = () => {
   return (
-    <section className="bg-[#f7f4f1] py-20 md:py-28">
+    <section className="bg-[#f7f4f1] pt-10 pb-20 md:pt-12 md:pb-28">
       <div className="container mx-auto px-6 lg:px-12">
         {/* HEADING */}
         <motion.div
@@ -90,7 +90,7 @@ const TeamSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16 md:mb-20"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#2c3e50] font-['Raleway'] leading-tight">
+          <h2 className="text-5xl md:text-6xl lg:text-5xl font-bold text-[#2c3e50] font-['Roboto Slab'] leading-tight">
             Meet Our Expert Dentists
           </h2>
         </motion.div>

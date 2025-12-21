@@ -117,8 +117,8 @@ const RootCanal = () => {
                 </div>
             </section>
 
-                       {/* Meet Our Expert Dentists */}
-           <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
+            {/* Meet Our Expert Dentists */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f7f7f7]">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                         {/* Left Content */}
@@ -204,7 +204,7 @@ const RootCanal = () => {
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <Clock className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
-                                            <span>10+ Years of experience</span> 
+                                            <span>10+ Years of experience</span>
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <svg className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -259,7 +259,7 @@ const RootCanal = () => {
             </section>
 
             {/* Success Stories */}
-            <Testimonals 
+            <Testimonals
                 mainTitle="OUR SUCCESS STORIES"
                 subtitle="Restored Teeth, Renewed Comfort"
                 description="At 32 Dental Avenue, we’ve helped countless patients save their natural teeth through gentle, precise, and highly successful root canal treatments in Rohini. Our experienced dentists in Rohini Sector 5 use advanced technology and pain-free techniques to eliminate infection, ease sensitivity, and restore full tooth strength."

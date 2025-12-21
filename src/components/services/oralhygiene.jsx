@@ -133,7 +133,7 @@ const OralHygiene = () => {
             </section>
 
             {/* Meet Our Expert Dentists */}
-           <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f7f7f7]">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                         {/* Left Content */}
@@ -219,7 +219,7 @@ const OralHygiene = () => {
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <Clock className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
-                                            <span>10+ Years of experience</span> 
+                                            <span>10+ Years of experience</span>
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <svg className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -280,7 +280,7 @@ const OralHygiene = () => {
                 subtitle="Expert Dental Care, Healthy Outcomes"
                 description=" 32 Dental Avenue, we’ve transformed countless lives with durable, natural-looking dental implants that restore missing teeth with complete comfort and stability. Our expert implant dentists in Rohini use advanced technology and personalized planning to rebuild smiles with precision and long-lasting strength."
             />
-            
+
 
             {/* Our Facility */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">

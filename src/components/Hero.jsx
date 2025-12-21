@@ -62,9 +62,8 @@ function Hero() {
           <div
             key={i}
             aria-hidden={i !== current}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ease-in-out ${
-              i === current ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700 ease-in-out ${i === current ? 'opacity-100' : 'opacity-0'
+              }`}
             style={{
               backgroundImage: `url('${s.image}')`,
               filter: 'brightness(0.9) contrast(1.05) saturate(1.05)',
@@ -91,15 +90,14 @@ function Hero() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl text-left">
           <div
-            className={`transform transition-all duration-500 ease-in-out ${
-              textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-3'
-            }`}
+            className={`transform transition-all duration-500 ease-in-out ${textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-3'
+              }`}
           >
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)]"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight drop-shadow-[0_3px_12px_rgba(0,0,0,0.9)] font-roboto-slab"
               dangerouslySetInnerHTML={{ __html: slides[current].headline }}
             />
-            <p className="mt-4 text-base sm:text-lg md:text-xl text-white/95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] max-w-prose">
+            <p className="mt-4 text-base sm:text-lg md:text-xl text-white/95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] max-w-prose font-raleway">
               {slides[current].subheadline}
             </p>
 

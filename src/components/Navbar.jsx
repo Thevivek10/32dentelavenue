@@ -5,6 +5,7 @@ import { ChevronDown } from 'lucide-react';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -36,8 +37,8 @@ function Navbar() {
               />
               {/* Brand text - visible on md+ only */}
               <span className="hidden md:inline-flex flex-col ml-3 leading-none">
-                <span className="text-2xl md:text-3xl font-extrabold text-[#424040] tracking-wide">
-                  <span className="text-[#afabfd]"></span>&nbsp;Dental Avenue
+                <span className="text-2x1 md:text-3x2 font-extrabold text-[#8FC6B7] tracking-wide">
+                  <span className="text-[#8FC6B7]"></span>&nbsp;Dental Avenue
                 </span>
                 <span className="text-sm text-[#424040] opacity-80">Smile design & care</span>
               </span>
@@ -108,6 +109,27 @@ function Navbar() {
             >
               Contact Us
             </Link>
+            <div className="relative group">
+              <button
+                className={`flex items-center text-[#424040] px-3 py-2 rounded-md text-sm font-medium transition-all hover:-translate-y-0.5 hover:bg-[#f7f4f1]/80 ${location.pathname.includes('/blogs') || location.pathname.includes('/gallery') ? 'bg-[#f7f4f1]/60' : ''
+                  }`}
+              >
+                Resources
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+
+              {/* Dropdown Menu */}
+              <div className="absolute left-0 mt-0 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left z-50 border border-gray-100 overflow-hidden">
+                <div className="py-2">
+                  <Link to="/blogs" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                    Blogs
+                  </Link>
+                  <Link to="/gallery" className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#f7f4f1] hover:text-[#88d4cb] transition-colors">
+                    Gallery
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Book Appointment Button */}
@@ -236,6 +258,40 @@ function Navbar() {
           >
             Contact Us
           </Link>
+          <button
+            onClick={() => setIsMobileResourcesOpen(!isMobileResourcesOpen)}
+            className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-lg font-semibold text-[#424040] hover:bg-[#eae7e3] transition ${location.pathname.includes('/blogs') || location.pathname.includes('/gallery') ? 'bg-[#eae7e3]' : ''
+              }`}
+          >
+            Resources
+            <ChevronDown
+              className={`h-5 w-5 transform transition-transform duration-200 ${isMobileResourcesOpen ? 'rotate-180' : ''
+                }`}
+            />
+          </button>
+
+          {/* Mobile Resources Dropdown */}
+          <div
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileResourcesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+              }`}
+          >
+            <div className="pl-6 space-y-2 pb-2">
+              <Link
+                to="/blogs"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
+              >
+                Blogs
+              </Link>
+              <Link
+                to="/gallery"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-[#88d4cb] transition-colors"
+              >
+                Gallery
+              </Link>
+            </div>
+          </div>
 
           <button
             onClick={() => setIsOpen(false)}

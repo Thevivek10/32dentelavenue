@@ -11,157 +11,104 @@ export default function AppointmentBooking() {
     date: "",
   });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const handleChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = () => {
-    console.log("Form submitted:", formData);
     alert("Appointment request submitted! We will contact you shortly.");
   };
 
   return (
-    <div className="bg-[#8FC6B7] w-full py-12 md:py-16 lg:py-20 overflow-hidden">
-      {/* Section Wrapper */}
-      <div className="w-full max-w-[1600px] mx-auto">
+    <section className="bg-[#8FC6B7] py-25 md:py-20">
+      <div className="max-w-6xl mx-auto px-6">
+
         {/* Header */}
-        <div className="px-6 sm:px-8 lg:px-12 max-w-4xl mx-auto text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#424040] mb-3">Schedule Your Visit</h2>
-          <p className="text-lg text-[#424040]/80">Book an appointment in minutes — choose a location and date, and we'll confirm your visit.</p>
-        </div>
-        {/* Booking and Map Section */}
-        <div className="grid md:grid-cols-2 w-full h-auto bg-[#f7f4f1] overflow-hidden">
-          {/* Left - Booking Form */}
-          <div className="flex flex-col justify-center p-10 md:p-20 bg-gradient-to-br from-white/70 to-[#f7f4f1] relative">
-            <div className="absolute top-12 right-16 w-40 h-40 bg-[#88d4cb]/20 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-12 left-16 w-48 h-48 bg-[#afabfd]/10 rounded-full blur-2xl"></div>
+        {/* <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#424040]">
+            Schedule Your Visit
+          </h2>
+          <p className="text-[#424040]/80 mt-2 text-base md:text-lg">
+            Book your dental appointment in just a few steps
+          </p>
+        </div> */}
 
-            <div className="relative z-10 max-w-lg mx-auto">
-              <h1 className="text-3xl md:text-5xl font-bold text-[#424040] mb-6 flex items-center gap-1">
-                Book Appointment
-              </h1>
-              <p className="text-[#424040]/80 mb-10 leading-relaxed text-lg">
-                Fill in your details and we’ll confirm your visit. Our expert dentists are ready to care for your smile!
-              </p>
+        {/* Main Card */}
+        <div className="grid md:grid-cols-2 bg-[#f7f4f1] rounded-3xl overflow-hidden shadow-lg">
 
-              <div className="space-y-7">
-                {/* Name Fields */}
-                <div className="grid grid-cols-2 gap-5">
-                  <div className="relative">
-                    <User className="absolute left-3 top-3.5 text-[#88d4cb]" size={22} />
-                    <input
-                      type="text"
-                      name="firstName"
-                      placeholder="First Name"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      className="w-full pl-11 pr-4 py-4 bg-white border border-[#e5e5e5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] text-lg transition"
-                    />
-                  </div>
+          {/* Form */}
+          <div className="p-8 md:p-12">
+            <h3 className="text-2xl md:text-3xl font-semibold text-[#424040] mb-6 font-['Raleway']">
+              Book Appointment
+            </h3>
 
-                  <div className="relative">
-                    <User className="absolute left-3 top-3.5 text-[#88d4cb]" size={22} />
-                    <input
-                      type="text"
-                      name="lastName"
-                      placeholder="Last Name"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      className="w-full pl-11 pr-4 py-4 bg-white border border-[#e5e5e5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] text-lg transition"
-                    />
-                  </div>
-                </div>
+            <div className="space-y-5">
 
-                {/* Contact Fields */}
-                <div className="grid grid-cols-2 gap-5">
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-3.5 text-[#88d4cb]" size={22} />
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email Address"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full pl-11 pr-4 py-4 bg-white border border-[#e5e5e5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] text-lg transition"
-                    />
-                  </div>
-
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-3.5 text-[#88d4cb]" size={22} />
-                    <input
-                      type="tel"
-                      name="phone"
-                      placeholder="Phone Number"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full pl-11 pr-4 py-4 bg-white border border-[#e5e5e5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] text-lg transition"
-                    />
-                  </div>
-                </div>
-
-                {/* Location */}
-                <div className="relative">
-                  <MapPin className="absolute left-3 top-3.5 text-[#88d4cb]" size={22} />
-                  <select
-                    name="location"
-                    value={formData.location}
-                    onChange={handleChange}
-                    className="w-full pl-11 pr-4 py-4 bg-white border border-[#e5e5e5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] text-lg appearance-none transition"
-                  >
-                    <option value="">Choose Location</option>
-                    <option value="rohini_sec5">
-                      32 Dental Avenue - Sector 5, Rohini
-                    </option>
-                    <option value="rohini_other">
-                      32 Dental Avenue - Other Branch
-                    </option>
-                  </select>
-                </div>
-
-                {/* Date */}
-                <div className="relative">
-                  <Calendar className="absolute left-3 top-3.5 text-[#88d4cb]" size={22} />
-                  <input
-                    type="date"
-                    name="date"
-                    value={formData.date}
-                    onChange={handleChange}
-                    className="w-full pl-11 pr-4 py-4 bg-white border border-[#e5e5e5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88d4cb] text-lg transition"
-                  />
-                </div>
-
-                {/* Button */}
-                <button
-                  onClick={handleSubmit}
-                  className="w-full mt-6 bg-gradient-to-r from-[#88d4cb] to-[#afabfd] text-white font-semibold py-5 rounded-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 text-lg"
-                >
-                  Confirm Appointment
-                </button>
+              {/* Name */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Input icon={User} name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} />
+                <Input icon={User} name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} />
               </div>
+
+              {/* Contact */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Input icon={Mail} name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+                <Input icon={Phone} name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
+              </div>
+
+              {/* Location */}
+              <div className="relative">
+                <MapPin className="absolute left-3 top-3 text-[#8FC6B7]" />
+                <select
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 bg-white focus:ring-2 focus:ring-[#8FC6B7] outline-none"
+                >
+                  <option value="">Choose Location</option>
+                  <option value="rohini">
+                    Sector 5, Rohini
+                  </option>
+                </select>
+              </div>
+
+              {/* Date */}
+              <Input icon={Calendar} type="date" name="date" value={formData.date} onChange={handleChange} />
+
+              {/* Button */}
+              <button
+                onClick={handleSubmit}
+                className="w-full bg-[#424040] text-white py-3.5 rounded-full font-medium hover:bg-[#8FC6B7] hover:text-[#424040] transition-all"
+              >
+                Confirm Appointment
+              </button>
             </div>
           </div>
 
-          {/* Right - Map */}
-          <div className="relative bg-[#f7f4f1] flex flex-col justify-center items-center p-0 md:p-0">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#88d4cb]/10 to-[#afabfd]/10 rounded-none blur-3xl"></div>
-            <div className="relative w-full h-[90vh] md:h-[95vh]">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.196835329085!2d77.1092939!3d28.713663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07d8729099e1%3A0x54581905e31175cb!2s32%20Dental%20Avenue-%20Sector%205%20Rohini%2C%20Delhi!5e0!3m2!1sen!2sin!4v1761651873675!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="32 Dental Avenue - Sector 5 Rohini"
-              ></iframe>
-            </div>
+          {/* Map */}
+          <div className="h-[280px] md:h-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.196835329085!2d77.1092939!3d28.713663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07d8729099e1%3A0x54581905e31175cb!2s32%20Dental%20Avenue-%20Sector%205%20Rohini%2C%20Delhi!5e0!3m2!1sen!2sin!4v1761651873675!5m2!1sen!2sin"
+              className="w-full h-full"
+              loading="lazy"
+              style={{ border: 0 }}
+              allowFullScreen
+              title="Dental Clinic Location"
+            />
           </div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 }
+
+/* Reusable Input */
+const Input = ({ icon: Icon, ...props }) => (
+  <div className="relative">
+    <Icon className="absolute left-3 top-3 text-[#8FC6B7]" />
+    <input
+      {...props}
+      className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 bg-white focus:ring-2 focus:ring-[#8FC6B7] outline-none"
+    />
+  </div>
+);

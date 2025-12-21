@@ -85,7 +85,7 @@ const videoTestimonials = [
 const VideoTestimonial = ({ videoUrl }) => {
   const videoId = videoUrl.split('/').pop();
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-  
+
   return (
     <div className="min-w-[280px] md:min-w-[320px] h-[500px] rounded-2xl overflow-hidden shadow-xl mr-6 bg-black">
       <iframe
@@ -123,10 +123,10 @@ const Testimonials = () => {
       <div className="w-full">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#424040] mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#424040] mb-6 font-roboto-slab">
             Stories That Make Us Smile
           </h1>
-          <p className="text-lg text-[#424040]/70">
+          <p className="text-lg text-[#424040]/70 font-raleway">
             Real experiences shared by our valued patients who trusted us with their smiles.
           </p>
         </div>

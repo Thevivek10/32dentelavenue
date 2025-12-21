@@ -8,7 +8,7 @@ const DentalHero = () => {
       <div className="w-full md:w-1/2 h-[50vh] md:h-auto flex items-center justify-center ">
         <img
           src={abouthero}
-           alt="Dental care"
+          alt="Dental care"
           className="w-full h-full object-cover rounded-2xl shadow-md"
 
         />

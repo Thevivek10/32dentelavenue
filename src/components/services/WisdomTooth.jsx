@@ -107,8 +107,8 @@ const WisdomTooth = () => {
                 </div>
             </section>
 
-                        {/* Meet Our Expert Dentists */}
-           <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
+            {/* Meet Our Expert Dentists */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f7f7f7]">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                         {/* Left Content */}
@@ -194,7 +194,7 @@ const WisdomTooth = () => {
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <Clock className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
-                                            <span>10+ Years of experience</span> 
+                                            <span>10+ Years of experience</span>
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <svg className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -254,7 +254,7 @@ const WisdomTooth = () => {
                 subtitle="Pain-Free & Stress-Free"
                 description="At 32 Dental Avenue, we understand the anxiety surrounding wisdom tooth removal. That's why we prioritize patient comfort above all else. Our patients consistently report surprisingly painless procedures and smooth recoveries, thanks to our gentle approach and expert care."
 
-             />
+            />
 
             {/* Our Facility */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-bg">

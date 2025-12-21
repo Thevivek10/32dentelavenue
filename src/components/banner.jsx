@@ -68,10 +68,10 @@ const Banner = () => {
 
                   {/* Text */}
                   <div className="relative z-10">
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#424040] mb-1 sm:mb-2">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#424040] mb-1 sm:mb-2 font-roboto-slab">
                       {stat.value}
                     </h3>
-                    <p className="text-sm sm:text-base md:text-lg font-medium text-[#424040]/80">
+                    <p className="text-sm sm:text-base md:text-lg font-medium text-[#424040]/80 font-raleway">
                       {stat.label}
                     </p>
                   </div>

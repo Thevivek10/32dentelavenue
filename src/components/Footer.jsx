@@ -10,16 +10,29 @@ const Footer = () => {
       { name: 'Cosmetic Dentistry', path: '/services/cosmetic' },
       { name: 'Dental Implants', path: '/services/implants' },
       { name: 'Orthodontics', path: '/services/orthodontics' },
-      { name: 'Pediatric Dentistry', path: '/services/pediatric' }
+      { name: 'Pediatric Dentistry', path: '/services/pediatric' },
+      { name: 'Wisdom Tooth Surgery', path: '/services/wisdom' },
+      { name: 'Root Canal Treatment', path: '/services/root-canal' },
+      { name: 'Oral Hygiene', path: '/services/hygiene' }
     ],
-    company: [
-      { name: 'About Us', path: '/about' },
-      { name: 'Our Team', path: '/team' },
-      { name: 'Careers', path: '/careers' },
-      { name: 'Contact', path: '/contact' }
+    locations: [
+      {
+        name: 'Sector 5, Rohini',
+        address: '32 Dental Avenue, Sector 5, Rohini, Delhi',
+        url: 'https://share.google/Rvq1rQlyaUmwPQMLS' // Placeholder / Verify actual link format if possible, but using user provided
+      },
+      {
+        name: 'Sector 7, Rohini',
+        address: '32 Dental Avenue, Sector 7, Rohini, Delhi',
+        url: 'https://share.google/TMg5fVuGZQpdXcQEB'
+      },
+      {
+        name: 'Sector 16, Rohini',
+        address: '32 Dental Avenue, Sector 16, Rohini, Delhi',
+        url: 'https://share.google/JYUVIyA1uln00yyV9'
+      }
     ],
     contact: {
-      address: '32 Dental Avenue, Sector 5, Rohini, Delhi',
       phone: '+91 98765 XXXXX',
       email: 'care@32dentalavenue.com',
       hours: 'Mon-Sat: 10:00 AM - 8:00 PM'
@@ -75,18 +88,25 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-[#060505]">Company</h3>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link, index) => (
+          {/* Locations Links - Replacing Company */}
+          <div className="col-span-1">
+            <h3 className="text-lg font-semibold mb-6 text-[#060505]">Our Locations</h3>
+            <ul className="space-y-4">
+              {footerLinks.locations.map((loc, index) => (
                 <li key={index}>
-                  <Link
-                    to={link.path}
-                    className="text-sm text-[#060505] hover:text-[#424040] transition-colors"
+                  <a
+                    href={loc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block"
                   >
-                    {link.name}
-                  </Link>
+                    <span className="block text-sm font-medium text-[#060505] group-hover:text-[#88d4cb] transition-colors">
+                      {loc.name}
+                    </span>
+                    <span className="block text-xs text-[#060505]/70 mt-1 leading-tight group-hover:text-[#424040]">
+                      {loc.address}
+                    </span>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -96,13 +116,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-[#424040]">Contact</h3>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <svg className="w-5 h-5 mt-1 text-[#88d4cb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-sm text-[#060505] leading-relaxed">{footerLinks.contact.address}</p>
-              </div>
+              {/* Address removed as it is now in Locations */}
               <div className="flex items-center space-x-3">
                 <svg className="w-5 h-5 text-[#88d4cb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

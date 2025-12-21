@@ -15,13 +15,13 @@ const sections = [
   },
   {
     title: "Our Mission",
-    icon: <FaHandsHelping className="text-[#88d4cb] text-5xl md:text-6xl" />,
+    icon: <FaHandsHelping className="text-[#afabfd] text-5xl md:text-6xl" />,
     text: "To deliver ethical, advanced, and patient-focused dental care using the latest technology. Our mission is to make every treatment journey seamless, transparent, and comfortable while building lifelong relationships based on trust.",
     image: missionImg,
   },
   {
     title: "Our Commitment",
-    icon: <FaHeart className="text-[#88d4cb] text-5xl md:text-6xl" />,
+    icon: <FaHeart className="text-[#FF9AA2] text-5xl md:text-6xl" />,
     text: "We are devoted to excellence in every smile we create. From preventive care to full restoration, our commitment is honesty, precision, and personalized care that ensures lasting confidence.",
     image: commitmentImg,
   },
@@ -29,7 +29,7 @@ const sections = [
 
 const VisionMission = () => {
   return (
-    <section className="bg-[#f7f4f1] py-28 md:py-36 overflow-hidden">
+    <section className="bg-white py-28 md:py-36 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Heading */}
         <div className="text-center mb-24">
@@ -49,9 +49,8 @@ const VisionMission = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className={`flex flex-col ${
-                i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
-              } items-center gap-10 md:gap-20`}
+              className={`flex flex-col ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
+                } items-center gap-10 md:gap-20`}
             >
               {/* Image */}
               <div className="w-full md:w-1/2 relative">

@@ -59,10 +59,10 @@ const Services = () => {
     <div className="bg-[#f7f4f1] min-h-screen py-20 px-6 sm:px-10 lg:px-20">
       {/* Section Header */}
       <div className="text-center mb-20">
-        <h2 className="text-5xl font-extrabold text-[#88d4cb] mb-6">
+        <h2 className="text-5xl font-extrabold text-[#88d4cb] mb-6 font-roboto-slab">
           Our Services
         </h2>
-        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto font-raleway">
           We combine modern technology with gentle care to provide a complete
           range of professional dental services for every smile.
         </p>
@@ -77,7 +77,7 @@ const Services = () => {
             className="bg-[#f7f4f1] rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 scroll-mt-24"
           >
             {/* Image */}
-            <div className="h-80 md:h-96 w-full overflow-hidden">
+            <div className="h-80 md:h-96 w-full overflow-hidden font-roboto-slab">
               <img
                 src={service.image}
                 alt={service.title}
@@ -86,15 +86,15 @@ const Services = () => {
             </div>
 
             {/* Text Content */}
-            <div className="p-8">
+            <div className="p-8 font-roboto-slab ">
               <h3 className="text-2xl font-semibold text-gray-800 mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-600 text-base leading-relaxed">
+              <p className="text-gray-600 text-base leading-relaxed font-raleway">
                 {service.description}
               </p>
 
-              <button className="mt-6 inline-flex items-center text-[#88d4cb] font-semibold hover:underline">
+              <button className="mt-6 inline-flex items-center text-[#88d4cb] font-semibold hover:underline font-roboto-slab">
                 Learn more
                 <svg
                   className="ml-2 w-5 h-5"

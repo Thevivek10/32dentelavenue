@@ -10,6 +10,8 @@ export default {
         'sans': ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
         'display': ['Plus Jakarta Sans', 'sans-serif'],
         'body': ['Plus Jakarta Sans', 'sans-serif'],
+        'roboto-slab': ['"Roboto Slab"', 'serif'],
+        'raleway': ['"Raleway"', 'sans-serif'],
       },
       colors: {
         'primary-periwinkle': '#afabfd',

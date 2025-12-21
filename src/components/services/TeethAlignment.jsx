@@ -106,8 +106,8 @@ const TeethAlignment = () => {
                 </div>
             </section>
 
-                        {/* Meet Our Expert Dentists */}
-           <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
+            {/* Meet Our Expert Dentists */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f7f7f7]">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-3 gap-12 items-start">
                         {/* Left Content */}
@@ -193,7 +193,7 @@ const TeethAlignment = () => {
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <Clock className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" />
-                                            <span>10+ Years of experience</span> 
+                                            <span>10+ Years of experience</span>
                                         </p>
                                         <p className="flex items-start gap-2">
                                             <svg className="w-4 h-4 mt-0.5 text-[#8FC6B7] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -251,7 +251,7 @@ const TeethAlignment = () => {
                 mainTitle="SUCCESS STORIES"
                 subtitle="Real Patients, Real Smiles"
                 description="Discover inspiring journeys of our patients who transformed their smiles and lives with our expert teeth alignment treatments. From clear aligners to braces, see how personalized care and advanced orthodontics made a difference."
-             />
+            />
 
 
             {/* Our Facility */}

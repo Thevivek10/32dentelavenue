@@ -1,54 +1,69 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
-const Banner = 'https://i.ibb.co/0Vh1mYVt/IMG-0428.jpg';
+// const Banner = "https://i.ibb.co/0Vh1mYVt/IMG-0428.jpg";
+import Banner from "../assets/images/CTA-IMAGE.jpg";
 
 export default function DentalCTA() {
   return (
-    <section className="py-20 bg-[#8FC6B7] overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative bg-[#f7f4f1] rounded-[2.5rem] overflow-hidden shadow-sm">
-          <div className="grid lg:grid-cols-2 gap-0">
-            {/* Content Side */}
-            <div className="relative z-10 flex flex-col justify-center p-8 sm:p-12 lg:p-16 xl:p-20 order-2 lg:order-1">
-              <div className="max-w-xl">
-                {/* <span className="inline-block py-1 px-3 rounded-full bg-white text-[#88d4cb] text-sm font-semibold tracking-wide mb-6 shadow-sm">
-                  Book Your Visit
-                </span> */}
+    <section className="relative py-24 bg-gradient-to-br from-[#EAF7F4] to-[#f7f4f1] overflow-hidden">
 
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#424040] mb-6 leading-[1.15]">
-                  Start Your Journey to a <span className="text-[#88d4cb]">Confident Smile</span>
-                </h2>
+      {/* Soft background blobs */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#88d4cb]/30 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#8FC6B7]/20 rounded-full blur-3xl"></div>
 
-                <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                  Experience world-class dental care with our expert team. We combine advanced technology with a gentle touch to give you the smile you deserve.
-                </p>
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-                <button className="group inline-flex items-center gap-2 bg-[#424040] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-[#88d4cb] hover:shadow-lg hover:-translate-y-1">
-                  Book Appointment
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </button>
-              </div>
+          {/* Content */}
+          <div className="max-w-xl">
 
-              {/* Decorative Elements */}
-              <div className="absolute top-0 left-0 w-64 h-64 bg-white/50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-              <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#88d4cb]/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-[#88d4cb]/10 text-[#2b6f6a] text-sm font-semibold">
+              <Sparkles className="w-4 h-4" />
+              Premium Dental Care
             </div>
 
-            {/* Image Side */}
-            <div className="relative h-[300px] sm:h-[400px] lg:h-auto order-1 lg:order-2">
-              <div className="absolute inset-0 bg-gray-200">
-                <img
-                  src={Banner}
-                  alt="Modern Dental Care"
-                  className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-              {/* Overlay Gradient */}
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#1f2933] leading-tight mb-6 font-roboto-slab">
+              Smile With <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#5bbfb2] to-[#88d4cb] font-roboto-slab">
+                Confidence Again
+              </span>
+            </h2>
 
+            <p className="text-gray-600 text-lg leading-relaxed mb-10 font-raleway">
+              Advanced treatments, experienced doctors, and a gentle approach —
+              everything your smile deserves under one roof.
+            </p>
+
+            <button className="group inline-flex items-center gap-3 bg-[#1f2933] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-[#88d4cb] hover:text-[#1f2933] hover:shadow-xl">
+              Book Appointment
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </button>
+          </div>
+
+          {/* Image */}
+          <div className="relative">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src={Banner}
+                alt="Dental Care"
+                className="w-full h-[420px] object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Floating card */}
+            <div className="absolute -bottom-6 -left-6 bg-white/80 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg">
+              <p className="text-sm font-semibold text-gray-800">
+                ⭐ 4.9/5 Patient Rating
+              </p>
+              <p className="text-xs text-gray-500">
+                Trusted by 10,000+ smiles
+              </p>
             </div>
           </div>
+
         </div>
       </div>
     </section>

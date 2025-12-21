@@ -67,15 +67,15 @@ const videoTestimonials = [
   "https://youtube.com/shorts/jbH0bwVN3Q0",
   "https://youtube.com/shorts/UpJ5DokV-4g",
   "https://youtube.com/shorts/uadT2bjEJxs",
-  "https://youtube.com/shorts/hrGgAIg-3JA",
-  "https://youtube.com/shorts/TVZ5IL52T_g",
-  "https://youtube.com/shorts/VCJBYD7NJLI"
+  // "https://youtube.com/shorts/hrGgAIg-3JA",
+  // "https://youtube.com/shorts/TVZ5IL52T_g",
+  // "https://youtube.com/shorts/VCJBYD7NJLI"
 ];
 
 const VideoTestimonial = ({ videoUrl }) => {
   const videoId = videoUrl.split('/').pop();
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-  
+
   return (
     <div className="min-w-[280px] md:min-w-[320px] h-[500px] rounded-2xl overflow-hidden shadow-xl mr-6 bg-black">
       <iframe
@@ -107,7 +107,7 @@ const TestimonialCard = ({ name, location, review, rating }) => (
   </div>
 );
 
-const SuccessStories = ({ 
+const SuccessStories = ({
   mainTitle = "OUR SUCCESS STORIES",
   subtitle = "Smiles That Inspire Confidence",
   description = "At 32 Dental Avenue, we've transformed hundreds of smiles with advanced cosmetic dentistry and personalized care. Explore real patient journeys and see how expert treatments, precision, and compassion helped them achieve the confident, radiant smiles they always Wanted."
@@ -118,13 +118,13 @@ const SuccessStories = ({
         {/* Section Header */}
         <div className="max-w-7xl mx-auto mb-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#424040] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#424040] mb-4 font-roboto-slab">
               {mainTitle}
             </h2>
-            <h3 className="text-2xl md:text-3xl font-bold text-[#88d4cb] mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#88d4cb] mb-6 font-railway">
               {subtitle}
             </h3>
-            <p className="text-[#424040]/70 text-lg max-w-4xl mx-auto">
+            <p className="text-[#424040]/70 text-lg max-w-4xl mx-auto font-railway">
               {description}
             </p>
           </div>
@@ -205,9 +205,9 @@ const Demo = () => {
     <div>
       {/* Default usage */}
       <SuccessStories />
-      
+
       {/* Custom headers example */}
-      <SuccessStories 
+      <SuccessStories
         mainTitle="PATIENT TESTIMONIALS"
         subtitle="Real Stories, Real Results"
         description="Discover how our patients experienced life-changing dental transformations. Their stories showcase our commitment to excellence and personalized care."

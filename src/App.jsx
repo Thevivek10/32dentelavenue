@@ -20,6 +20,8 @@ import WisdomTooth from './components/services/WisdomTooth'
 import RootCanal from './components/services/Root-cannel'
 import DentalImplants from './components/services/Dentel-implants'
 import OralHygiene from './components/services/oralhygiene'
+import Blogs from './pages/Blogs'
+import Gallery from './pages/Gallery'
 
 function HomePage() {
   return (
@@ -53,6 +55,8 @@ function App() {
           <Route path="/root-canal-treatment" element={<RootCanal />} />
           <Route path="/dental-implants" element={<DentalImplants />} />
           <Route path="/oral-hygiene" element={<OralHygiene />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <Footer />
       </div>

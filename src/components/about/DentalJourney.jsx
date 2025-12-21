@@ -31,7 +31,7 @@ export default function DentalJourney() {
   ];
 
   return (
-    <section className="w-full py-24 bg-[#f7f4f1] text-gray-800">
+    <section className="bg-white py-28 md:py-36 overflow-hidden text-gray-800">
       <div className="max-w-6xl mx-auto text-center px-6">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}

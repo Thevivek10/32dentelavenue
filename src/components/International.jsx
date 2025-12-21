@@ -64,11 +64,6 @@ const International = () => {
             icon: <Globe className="w-6 h-6" />
         },
         {
-            title: "Visa & Travel Assistance",
-            description: "Guidance for medical visa, travel dates, and scheduling based on your treatment timeline.",
-            icon: <Plane className="w-6 h-6" />
-        },
-        {
             title: "Accommodation Support",
             description: "Assistance with hotel recommendations near the clinic suitable for different budgets.",
             icon: <Hotel className="w-6 h-6" />
@@ -127,14 +122,14 @@ const International = () => {
                     alt="Dental Tourism India"
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
+                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 font-roboto-slab">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
                         Your Trusted Dental Partner in India
                     </h1>
-                    <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl drop-shadow-md">
+                    <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl drop-shadow-md font-railway">
                         Enjoy Smooth, Stress-Free Dental Care in India with 32 Dental Avenue
                     </p>
-                    <button className="bg-[#88d4cb] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#7bc0b8] transition-all transform hover:scale-105 shadow-lg">
+                    <button className="bg-[#88d4cb] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#7bc0b8] transition-all transform hover:scale-105 shadow-lg font-roboto-slab">
                         Schedule Consultation
                     </button>
                 </div>
@@ -146,7 +141,7 @@ const International = () => {
                     {stats.map((stat, index) => (
                         <div key={index} className="bg-white p-6 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
                             <h3 className="text-3xl md:text-4xl font-extrabold mb-2" style={{ color: stat.color }}>{stat.number}</h3>
-                            <p className="text-gray-600 font-medium text-sm md:text-base">{stat.label}</p>
+                            <p className="text-gray-600 font-medium text-sm md:text-base font-railway">{stat.label}</p>
                         </div>
                     ))}
                 </div>
@@ -159,9 +154,9 @@ const International = () => {
                         {/* Left Column: Content */}
                         <div className="flex flex-col gap-8">
                             <div>
-                                <span className="text-[#88d4cb] font-bold uppercase tracking-wider text-sm">WHY CHOOSE US</span>
-                                <h2 className="text-4xl font-bold text-[#424040] mt-2 leading-tight">Why Choose 32 Dental Avenue?</h2>
-                                <p className="text-lg text-gray-600 max-w-3xl mt-6">
+                                {/* <span className="text-[#88d4cb] font-bold uppercase tracking-wider text-sm">WHY CHOOSE US</span> */}
+                                <h2 className="text-4xl font-bold text-[#424040] mt-2 leading-tight font-roboto-slab">Why Choose 32 Dental Avenue?</h2>
+                                <p className="text-lg text-gray-600 max-w-3xl mt-6 font-railway">
                                     Choosing the right clinic is the most important step of your dental tourism journey. We ensure every international patient receives world-class care.
                                 </p>
                             </div>
@@ -213,18 +208,18 @@ const International = () => {
                     <div className="grid md:grid-cols-3 gap-8">
                         <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
                             <CheckCircle className="w-12 h-12 text-[#88d4cb] mx-auto mb-6" />
-                            <h3 className="text-xl font-bold text-[#424040] mb-4">No Hidden Costs</h3>
-                            <p className="text-gray-600">Upfront, transparent pricing with detailed written estimates shared before you begin your dental tourism journey.</p>
+                            <h3 className="text-xl font-bold text-[#424040] mb-4 font-roboto-slab">No Hidden Costs</h3>
+                            <p className="text-gray-600 font-railway">Upfront, transparent pricing with detailed written estimates shared before you begin your dental tourism journey.</p>
                         </div>
                         <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
                             <Smile className="w-12 h-12 text-[#88d4cb] mx-auto mb-6" />
-                            <h3 className="text-xl font-bold text-[#424040] mb-4">All-Inclusive Plans</h3>
-                            <p className="text-gray-600">Comprehensive packages covering consultations, procedures, digital scans, crowns/veneers, and essential clinical requirements.</p>
+                            <h3 className="text-xl font-bold text-[#424040] mb-4 font-roboto-slab">All-Inclusive Plans</h3>
+                            <p className="text-gray-600 font-railway">Comprehensive packages covering consultations, procedures, digital scans, crowns/veneers, and essential clinical requirements.</p>
                         </div>
                         <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
                             <Clock className="w-12 h-12 text-[#88d4cb] mx-auto mb-6" />
-                            <h3 className="text-xl font-bold text-[#424040] mb-4">Fast Solutions</h3>
-                            <p className="text-gray-600">Save both time and money with quick turnaround treatments, same-day procedures, and efficient planning tailored to your schedule.</p>
+                            <h3 className="text-xl font-bold text-[#424040] mb-4 font-roboto-slab">Fast Solutions</h3>
+                            <p className="text-gray-600 font-railway">Save both time and money with quick turnaround treatments, same-day procedures, and efficient planning tailored to your schedule.</p>
                         </div>
                     </div>
                 </div>
@@ -234,8 +229,8 @@ const International = () => {
             <div className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-[#424040] mb-4">Your Hassle-Free Journey</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <h2 className="text-4xl font-bold text-[#424040] mb-4 font-roboto-slab">Your Hassle-Free Journey</h2>
+                        <p className="text-lg text-gray-600 max-w-3xl mx-auto font-railway">
                             From your first virtual consultation to your final smile transformation, we guide, support, and care for you at every step.
                         </p>
                     </div>
@@ -246,8 +241,8 @@ const International = () => {
                                 <div className="w-12 h-12 bg-[#f7f4f1] rounded-full flex items-center justify-center text-[#88d4cb] mb-4">
                                     {step.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-[#424040] mb-3">{step.title}</h3>
-                                <p className="text-gray-600">{step.description}</p>
+                                <h3 className="text-xl font-bold text-[#424040] mb-3 font-roboto-slab">{step.title}</h3>
+                                <p className="text-gray-600 font-railway">{step.description}</p>
                             </div>
                         ))}
                     </div>
@@ -255,29 +250,29 @@ const International = () => {
             </div>
 
             {/* CTA Banner */}
-          <div className="bg-gradient-to-br from-[#8FC6B7] to-[#7ab5a5] py-20 text-white relative overflow-hidden">
-    {/* Decorative circles */}
-    <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-    <div className="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-    
-    <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="text-left space-y-6">
-                <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                    Meet the Leading Dental Experts
-                </h2>
-                
-                <p className="text-lg text-white/90 leading-relaxed">
-                    Behind every confident smile is a team that genuinely cares. Our highly skilled dentists, implant specialists, and cosmetic experts ensure you receive world-class treatment.
-                </p>
-                
-                <button className="bg-white text-[#8FC6B7] px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mt-4">
-                    Book a Consultation
-                </button>
-            </div>
-            
-            {/* Right Image Section */}
+            <div className="bg-gradient-to-br from-[#8FC6B7] to-[#7ab5a5] py-20 text-white relative overflow-hidden">
+                {/* Decorative circles */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        {/* Left Content */}
+                        <div className="text-left space-y-6">
+                            <h2 className="text-4xl md:text-5xl font-bold leading-tight font-roboto-slab">
+                                Meet the Leading Dental Experts
+                            </h2>
+
+                            <p className="text-lg text-white/90 leading-relaxed font-railway">
+                                Behind every confident smile is a team that genuinely cares. Our highly skilled dentists, implant specialists, and cosmetic experts ensure you receive world-class treatment.
+                            </p>
+
+                            <button className="bg-white text-[#8FC6B7] px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mt-4">
+                                Book a Consultation
+                            </button>
+                        </div>
+
+                        {/* Right Image Section */}
                         <div className="relative">
                             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
                                 <div className="aspect-square bg-gradient-to-br from-white/20 to-white/5 rounded-2xl flex items-center justify-center relative overflow-hidden">
@@ -299,9 +294,9 @@ const International = () => {
                                 </div> */}
                             </div>
                         </div>
-        </div>
-    </div>
-</div>
+                    </div>
+                </div>
+            </div>
 
             {/* Testimonials */}
             <Testimonials />
@@ -310,7 +305,7 @@ const International = () => {
             {/* FAQ Section */}
             <div className="py-20 bg-white">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-4xl font-bold text-[#424040] text-center mb-12">Frequently Asked Questions</h2>
+                    <h2 className="text-4xl font-bold text-[#424040] text-center mb-12 font-roboto-slab">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {faqs.map((faq, index) => (
                             <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
@@ -318,7 +313,7 @@ const International = () => {
                                     className="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-gray-50 transition-colors"
                                     onClick={() => toggleFaq(index)}
                                 >
-                                    <span className="font-semibold text-[#424040] text-lg">{faq.question}</span>
+                                    <span className="font-semibold text-[#424040] text-lg font-roboto-slab">{faq.question}</span>
                                     {openFaq === index ? (
                                         <ChevronUp className="w-5 h-5 text-[#88d4cb]" />
                                     ) : (
@@ -338,7 +333,7 @@ const International = () => {
             </div>
 
             {/* Booking Section */}
-            
+
         </div>
     );
 };
